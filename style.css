@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+
+  padding: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 5px 9px 20px black;
+  background-image: linear-gradient(
+    to left top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+}
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
+}
+.nav-items > ul > li {
+  margin-right: 60px;
+  font-size: 1.3rem;
+}
+.logo {
+  width: 100px;
+}
+.card {
+  height: 250px;
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px gray;
+}
+.dish {
+  height: 100%;
+  width: 100%;
+}
+.logo2 {
+  height: 200px;
+  width: 100%;
+}
+.cardlist {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid rgb(117, 117, 117);
+  padding: 10px;
+    margin: 10px;
+  background-size: cover;
+}
+footer {
+    display: flex;
+    justify-content: space-evenly;
+}

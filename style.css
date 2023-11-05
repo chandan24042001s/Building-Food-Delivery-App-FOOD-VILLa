@@ -68,3 +68,9 @@ footer {
     display: flex;
     justify-content: space-evenly;
 }
+.search-container{
+  height: 30px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}

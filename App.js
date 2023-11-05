@@ -1,21 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import Header from "./src/components/Header"
-import Body from "./src/components/Body"
+import {createRoot} from "react-dom/client";
+import Header from "./src/components/Header";
+import Body from "./src/components/Body";
 import Footer from "./src/components/Footer";
-  
 
-const Applayout=()=>{
-                return (
-                    <>
-                        <Header/>
-                        <Body/>
-                        <Footer/>
-                    </>
-                )
-            }
+const Applayout = () => {
+  return (
+    <React.Fragment>
+      <Header />
+      <Body />
+      <Footer />
+    </React.Fragment>
+  );
+};
 
-            const root=ReactDOM.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 
-            root.render(<Applayout/>);
-    
+root.render(<Applayout />);

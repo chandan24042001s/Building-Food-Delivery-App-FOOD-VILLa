@@ -27,6 +27,7 @@ const Body = () => {
     //Api Call
     getRestraunt();
   }, []);
+  
 
   async function getRestraunt() {
     const data = await fetch(
@@ -47,6 +48,8 @@ const Body = () => {
 
   console.log("render");
 
+
+
   function filterData(searchText, restraunts) {
     const filterdata = restraunts.filter((restraunt) => {
       console.log(restraunt);
@@ -55,7 +58,7 @@ const Body = () => {
     console.log(filterdata);
     return filterdata;
   }
-
+ 
   return filteredRestraunts.length === 0 ? (
     <Shimmer />
   ) : (

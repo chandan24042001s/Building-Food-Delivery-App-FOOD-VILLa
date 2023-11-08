@@ -38,8 +38,8 @@
   width: 100px;
 }
 .card {
-  height: 250px;
-  width: 200px;
+  height: 320px;
+  width: 210px;
   border: 1px solid black;
   padding: 10px;
   margin: 10px;
@@ -73,4 +73,25 @@ footer {
   display: flex;
   gap: 20px;
   padding: 20px;
+}
+
+.Shimmar-card{
+  height: 200px;
+  width: 200px;
+  border: 3px solid lightgray;
+}
+.restraunt-list{
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid rgb(117, 117, 117);
+  gap: 30px;
+  margin: 50px;
+  padding: 60px;
+  
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding-right: 20px;
 }

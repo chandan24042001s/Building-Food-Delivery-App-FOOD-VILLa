@@ -21,36 +21,44 @@ const Body = () => {
   const [searchClick, setSearchClick] = useState("true");
   const [restraunts, setRestraunts] = useState([]);
   const [filteredRestraunts, setFilteredRestraunts] = useState([]);
-  const [allRestraunts,setAllRestraunts]=useState([]);
+  const [allRestraunts, setAllRestraunts] = useState([]);
 
-useEffect(()=>{
+  useEffect(() => {
     //Api Call
     getRestraunt();
-},[]);
+  }, []);
 
-async function getRestraunt() {
-  const data=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING")
-  const json=await data.json();
-  
+  async function getRestraunt() {
+    const data = await fetch(
+      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
 
-  setRestraunts(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-  setAllRestraunts(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-  setFilteredRestraunts(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+    setRestraunts(
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+    );
+    setAllRestraunts(
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+    );
+    setFilteredRestraunts(
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+    );
+  }
 
+  console.log("render");
 
-}
-
-console.log("render");
-
-function filterData(searchText,restraunts) {
+  function filterData(searchText, restraunts) {
     const filterdata = restraunts.filter((restraunt) => {
-        return restraunt.card?.card?.info.name.toLowerCase().includes(searchText);
+      console.log(restraunt);
+      return restraunt.info.name.includes(searchText);
     });
     console.log(filterdata);
     return filterdata;
-}
+  }
 
-  return (filteredRestraunts.length===0)?(<Shimmer/>):(
+  return filteredRestraunts.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="search-container">
         <input
@@ -59,22 +67,23 @@ function filterData(searchText,restraunts) {
           className="search-input"
           value={searchTXT}
           onChange={(e) => {
-            setSearchTXT(e.target.value.toLowerCase());
+            setSearchTXT(e.target.value);
           }}
         ></input>
         <button
           onClick={() => {
             //neeed to filter data
-            const data = filterData(searchTXT,allRestraunts);
+            const data = filterData(searchTXT, allRestraunts);
+            console.log(data);
             setFilteredRestraunts(data);
           }}
         >
           Search
-        </button> 
+        </button>
       </div>
       <div className="cardlist">
-        {filteredRestraunts.map((restraunt,index) => (
-          <RestrauntCard key={index}{...restraunt.info} />
+        {filteredRestraunts.map((restraunt, index) => (
+          <RestrauntCard key={index} {...restraunt.info} />
         ))}
       </div>
     </>

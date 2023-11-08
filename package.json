@@ -4,7 +4,7 @@
   "description": "this is live",
   "scripts": {
     "start": "parcel index.html",
-    "dev":"nodemon index.html",
+    "dev": "nodemon index.html",
     "build": "parcel build index.html",
     "test": "jest"
   },

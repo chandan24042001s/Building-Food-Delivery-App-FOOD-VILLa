@@ -1,6 +1,7 @@
 import { restrauntlist, swiggyIMageCDN } from "../../constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const RestrauntCard = (props) => {
   return (
@@ -27,19 +28,20 @@ const Body = () => {
     //Api Call
     getRestraunt();
   }, []);
-  
+
 
   async function getRestraunt() {
     const data = await fetch(
       "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+    console.log(json);
 
     setRestraunts(
-      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setAllRestraunts(
-      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestraunts(
       json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
@@ -47,8 +49,6 @@ const Body = () => {
   }
 
   console.log("render");
-
-
 
   function filterData(searchText, restraunts) {
     const filterdata = restraunts.filter((restraunt) => {
@@ -59,7 +59,7 @@ const Body = () => {
     return filterdata;
   }
  
-  return filteredRestraunts.length === 0 ? (
+  return filteredRestraunts.length == 0 ? (
     <Shimmer />
   ) : (
     <>
@@ -86,7 +86,9 @@ const Body = () => {
       </div>
       <div className="cardlist">
         {filteredRestraunts.map((restraunt, index) => (
-          <RestrauntCard key={index} {...restraunt.info} />
+        <Link to={"/restaurant/"+restraunt?.info?.id}>
+          <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />
+          </Link>
         ))}
       </div>
     </>

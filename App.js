@@ -6,10 +6,14 @@ import About from "./src/components/About";
 import Error from "./src/components/Error";
 import Contact from "./src/components/Contact";
 import Footer from "./src/components/Footer";
-import { createBrowserRouter ,Outlet,RouterProvider,useRouteError} from "react-router-dom";
+import { createBrowserRouter ,Outlet,RouterProvider,useParams,useRouteError} from "react-router-dom";
+import RestaurantMenu from "./src/components/RestaurantMenu";
 
 const Applayout = () => {
   const error=useRouteError();
+  const {id}=useParams();
+  // const {id}=params;
+  console.log(id);  
   console.log(error);
   return (
     <React.Fragment>
@@ -37,7 +41,12 @@ const AppRouter=createBrowserRouter([
       {
         path:"/contact",
         element:<Contact/>
+      },
+      {
+        path:"/restaurant/:id",
+        element:<RestaurantMenu/>
       }
+      
 
     ]
   },

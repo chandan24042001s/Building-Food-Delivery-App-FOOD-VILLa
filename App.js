@@ -9,6 +9,12 @@ import Footer from "./src/components/Footer";
 import { createBrowserRouter ,Outlet,RouterProvider,useParams,useRouteError} from "react-router-dom";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 
+
+import { lazy } from "react";
+
+const InstaMart=lazy(()=>{
+  import("./src/components/InstaMart")
+})
 const Applayout = () => {
   const error=useRouteError();
   const {id}=useParams();
@@ -45,7 +51,13 @@ const AppRouter=createBrowserRouter([
       {
         path:"/restaurant/:id",
         element:<RestaurantMenu/>
+      },
+      {
+        path:"/instamart",
+        element:<InstaMart/>
       }
+      
+
       
 
     ]

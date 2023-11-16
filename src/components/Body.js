@@ -14,13 +14,12 @@ const Body = () => {
   const [restraunts, setRestraunts] = useState([]);
   const [filteredRestraunts, setFilteredRestraunts] = useState([]);
   const [allRestraunts, setAllRestraunts] = useState([]);
-  const isOnline=useOnline();
+  const isOnline = useOnline();
 
   useEffect(() => {
     //Api Call
     getRestraunt();
   }, []);
-
 
   async function getRestraunt() {
     const data = await fetch(
@@ -42,10 +41,18 @@ const Body = () => {
 
   console.log("render");
 
-  if(!isOnline){
-    return <h1> Offline hoo bhaiya</h1>
+  function filterData(searchTXT, restraunts){
+    const filteredData=restraunts.filter((restaurant)=>restaurant.info.name.includes(searchTXT));
+    // const filteredData= restraunts.filter((restraunts)=>{
+    //   // restraunts.filter()(restraunt.info.name.includes(searchTXT))
+    // }}
+    return filteredData;
   }
- 
+
+  if (!isOnline) {
+    return <h1> Offline hoo bhaiya</h1>;
+  }
+
   return filteredRestraunts.length == 0 ? (
     <Shimmer />
   ) : (
@@ -57,7 +64,7 @@ const Body = () => {
           className="search-input"
           value={searchTXT}
           onChange={(e) => {
-            setSearchTXT(e.target.value); 
+            setSearchTXT(e.target.value);
           }}
         ></input>
         <button
@@ -73,8 +80,8 @@ const Body = () => {
       </div>
       <div className="cardlist">
         {filteredRestraunts.map((restraunt, index) => (
-        <Link to={"/restaurant/"+restraunt?.info?.id}>
-          <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />
+          <Link to={"/restaurant/" + restraunt?.info?.id}>
+            <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />
           </Link>
         ))}
       </div>

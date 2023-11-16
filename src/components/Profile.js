@@ -20,7 +20,7 @@ const Profile = (props) => {
     <>
 
     <h1>Profile Functional Component</h1>
-    <h2>{props.name}</h2>
+    <h2 className='font-bold text-xl'>{props.name}</h2>
     <h2>Count :{count} </h2>
 
     <button onClick={()=>{

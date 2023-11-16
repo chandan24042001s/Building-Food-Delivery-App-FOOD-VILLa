@@ -21,8 +21,8 @@ class About extends React.Component {
     console.log("parent render");
   return (
    <>
-    <h1> About Us</h1>
-    <h3> This is live . Components will render here. </h3>
+    <h1 className='font-bold text-4xl'> About Us</h1>
+    <h3 className='text-2xl'> This is live . Components will render here. </h3>
     {/* <ProfileClass name={"first child"}/> */}
     <Profile name={"First child"}/>
    

@@ -9,9 +9,10 @@ import Footer from "../components/Footer";
 import { createBrowserRouter ,Outlet,RouterProvider,useParams,useRouteError} from "react-router-dom";
 import RestaurantMenu from "../components/RestaurantMenu";
 import { lazy } from "react";
+import Shimmer from "../components/Shimmer";
 
 
-const Instamart=lazy(()=>import("../components/InstaMart"))
+const Instamart=lazy(()=>import("../components/InstaMart"));
 const Applayout = () => {
   const error=useRouteError();
   const {id}=useParams();
@@ -52,9 +53,10 @@ const AppRouter=createBrowserRouter([
       {
         path:"/instamart",
 
-        element:(<Suspense>
+        element:(<Suspense fallback={<Shimmer/>}>
           <Instamart/>
-          </Suspense>)
+          </Suspense>
+          )
       } 
 
     ]

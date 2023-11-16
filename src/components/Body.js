@@ -29,10 +29,10 @@ const Body = () => {
     console.log(json);
 
     setRestraunts(
-      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setAllRestraunts(
-      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestraunts(
       json.data.cards[2]?.card.card.gridElements.infoWithStyle.restaurants

@@ -1,19 +1,11 @@
 import { restrauntlist, swiggyIMageCDN } from "../../constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
+import RestrauntCard from "./RestrauntCard";
+import filterData from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
-const RestrauntCard = (props) => {
-  return (
-    <div>
-      <div className="card">
-        <img className="dish" src={swiggyIMageCDN + props.cloudinaryImageId} />
-        <h2>{props.name}</h2>
-        <h4>{props.cuisines?.join(" ")}</h4>
-        {<h5>{props.avgRating} stars</h5>}
-      </div>
-    </div>
-  );
-};
 const Body = () => {
   // let searchTXT="KFC";
   /** Every Component in react maintains a state*/
@@ -21,27 +13,47 @@ const Body = () => {
   const [restraunts, setRestraunts] = useState([]);
   const [searchResult, setSearchResult] = useState(true);
   const [filteredRestraunts, setFilteredRestraunts] = useState([]);
-  const [allRestraunts,setAllRestraunts]=useState([]);
+  const [allRestraunts, setAllRestraunts] = useState([]);
+  const isOnline = useOnline();
 
-useEffect(()=>{
+  useEffect(() => {
     //Api Call
     getRestraunt();
-},[]);
+  }, []);
 
-async function getRestraunt() {
-  const data=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING")
-  const json=await data.json();
-  
+  async function getRestraunt() {
+    const data = await fetch(
+      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    console.log(json);
 
-  setRestraunts(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-  setAllRestraunts(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
-  setFilteredRestraunts(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+    setRestraunts(
+      json.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setAllRestraunts(
+      json.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRestraunts(
+      json.data.cards[2]?.card.card.gridElements.infoWithStyle.restaurants
+    );
+  }
 
+  console.log("render");
 
-}
+  function filterData(searchTXT, restraunts){
+    const filteredData=restraunts.filter((restaurant)=>restaurant.info.name.includes(searchTXT));
+    // const filteredData= restraunts.filter((restraunts)=>{
+    //   // restraunts.filter()(restraunt.info.name.includes(searchTXT))
+    // }}
+    return filteredData;
+  }
 
-console.log("render");
+  if (!isOnline) {
+    return <h1> Offline hoo bhaiya</h1>;
+  }
 
+<<<<<<< HEAD
 function filterData(searchTXT,restraunts) {
     const filterdata = restraunts.filter((restraunt) => {
       console.log(restraunt);
@@ -53,22 +65,35 @@ function filterData(searchTXT,restraunts) {
 }
 
   return (filteredRestraunts.length===0)?(<Shimmer/>):(
+=======
+  return filteredRestraunts.length == 0 ? (
+    <Shimmer />
+  ) : (
+>>>>>>> 8decafde854cd1fc31d97acbc7cb331365b3a3f1
     <>
-      <div className="search-container">
+      <div className="p-5 bg-pink-50 my-4">
         <input
           type="text"
           placeholder="Search here"
-          className="search-input"
+          className="px-3"
           value={searchTXT}
           onChange={(e) => {
             setSearchTXT(e.target.value);
           }}
         ></input>
+<<<<<<< HEAD
         <button
          onClick={() => {
           const data = filterData(searchTXT, allRestraunts);
           console.log(data);
           if (data.length) {
+=======
+        <button className="p-2 m-2 bg-purple-50 text-black rounded-md"
+          onClick={() => {
+            //neeed to filter data
+            const data = filterData(searchTXT, allRestraunts);
+            console.log(data);
+>>>>>>> 8decafde854cd1fc31d97acbc7cb331365b3a3f1
             setFilteredRestraunts(data);
             setSearchResult(true);
           } else setSearchResult(false);
@@ -80,11 +105,13 @@ function filterData(searchTXT,restraunts) {
           // }}
         >
           Search
-        </button> 
+        </button>
       </div>
-      <div className="cardlist">
-        {filteredRestraunts.map((restraunt,index) => (
-          <RestrauntCard key={index}{...restraunt.info} />
+      <div className="flex flex-wrap">
+        {filteredRestraunts.map((restraunt, index) => (
+          <Link to={"/restaurant/" + restraunt?.info?.id}>
+            <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />
+          </Link>
         ))}
       </div>
     </>

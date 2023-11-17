@@ -18,8 +18,8 @@ const Body = () => {
   // let searchTXT="KFC";
   /** Every Component in react maintains a state*/
   const [searchTXT, setSearchTXT] = useState();
-  const [searchClick, setSearchClick] = useState("true");
   const [restraunts, setRestraunts] = useState([]);
+  const [searchResult, setSearchResult] = useState(true);
   const [filteredRestraunts, setFilteredRestraunts] = useState([]);
   const [allRestraunts,setAllRestraunts]=useState([]);
 
@@ -42,9 +42,11 @@ async function getRestraunt() {
 
 console.log("render");
 
-function filterData(searchText,restraunts) {
+function filterData(searchTXT,restraunts) {
     const filterdata = restraunts.filter((restraunt) => {
-        return restraunt.card?.card?.info.name.toLowerCase().includes(searchText);
+      console.log(restraunt);
+        // return restraunt.card?.card?.info.name.includes(searchTXT);
+        return restraunt.info.name.includes(searchTXT);
     });
     console.log(filterdata);
     return filterdata;
@@ -59,15 +61,23 @@ function filterData(searchText,restraunts) {
           className="search-input"
           value={searchTXT}
           onChange={(e) => {
-            setSearchTXT(e.target.value.toLowerCase());
+            setSearchTXT(e.target.value);
           }}
         ></input>
         <button
-          onClick={() => {
-            //neeed to filter data
-            const data = filterData(searchTXT,allRestraunts);
+         onClick={() => {
+          const data = filterData(searchTXT, allRestraunts);
+          console.log(data);
+          if (data.length) {
             setFilteredRestraunts(data);
-          }}
+            setSearchResult(true);
+          } else setSearchResult(false);
+        }}
+          // onClick={() => {
+          //   //neeed to filter data
+          //   const data = filterData(searchTXT,allRestraunts);
+          //   setFilteredRestraunts(data);
+          // }}
         >
           Search
         </button> 

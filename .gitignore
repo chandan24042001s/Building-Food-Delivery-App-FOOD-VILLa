@@ -1,8 +1,5 @@
 node_modules
-<<<<<<< HEAD
-dist
-.parcel-cache
-=======
 .parcel-cache
 dist
->>>>>>> 8decafde854cd1fc31d97acbc7cb331365b3a3f1
+
+.DS_Store

@@ -29,13 +29,13 @@ const Body = () => {
     console.log(json);
 
     setRestraunts(
-      json.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setAllRestraunts(
-      json.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestraunts(
-      json.data.cards[2]?.card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
 
@@ -53,7 +53,7 @@ const Body = () => {
     return <h1> Offline hoo bhaiya</h1>;
   }
 
-<<<<<<< HEAD
+
 function filterData(searchTXT,restraunts) {
     const filterdata = restraunts.filter((restraunt) => {
       console.log(restraunt);
@@ -64,12 +64,7 @@ function filterData(searchTXT,restraunts) {
     return filterdata;
 }
 
-  return (filteredRestraunts.length===0)?(<Shimmer/>):(
-=======
-  return filteredRestraunts.length == 0 ? (
-    <Shimmer />
-  ) : (
->>>>>>> 8decafde854cd1fc31d97acbc7cb331365b3a3f1
+  return (filteredRestraunts.length===0)?(<Shimmer/>) : (
     <>
       <div className="p-5 bg-pink-50 my-4">
         <input
@@ -81,23 +76,18 @@ function filterData(searchTXT,restraunts) {
             setSearchTXT(e.target.value);
           }}
         ></input>
-<<<<<<< HEAD
-        <button
-         onClick={() => {
-          const data = filterData(searchTXT, allRestraunts);
-          console.log(data);
-          if (data.length) {
-=======
         <button className="p-2 m-2 bg-purple-50 text-black rounded-md"
           onClick={() => {
             //neeed to filter data
             const data = filterData(searchTXT, allRestraunts);
             console.log(data);
->>>>>>> 8decafde854cd1fc31d97acbc7cb331365b3a3f1
-            setFilteredRestraunts(data);
-            setSearchResult(true);
-          } else setSearchResult(false);
-        }}
+            if (data.length) {
+              setFilteredRestraunts(data);
+              setSearchResult(true);
+            } else {
+              setSearchResult(false);
+            }
+          }}
           // onClick={() => {
           //   //neeed to filter data
           //   const data = filterData(searchTXT,allRestraunts);
@@ -107,7 +97,7 @@ function filterData(searchTXT,restraunts) {
           Search
         </button>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap-reverse">
         {filteredRestraunts.map((restraunt, index) => (
           <Link to={"/restaurant/" + restraunt?.info?.id}>
             <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />

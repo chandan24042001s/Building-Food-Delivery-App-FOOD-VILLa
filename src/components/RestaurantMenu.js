@@ -10,7 +10,7 @@ const RestaurantMenu = () => {
 
 
   const restaurant=useRestaurant();
-  console.log(restaurant)
+  console.log(restaurant[3])
  
   //const basicInfo = restaurant?.cards[0]?.card?.card?.info;
   //const itemCards = cardItems?.cards[2].groupedCard.cardGroupMap.REGULAR.cards;
@@ -24,6 +24,8 @@ const RestaurantMenu = () => {
         </div>
         <div className="menu-card">
         {console.log(restaurant)}
+        {/* <h2> {restaurant.card?.card?.info.name} </h2> */}
+       
         {/* <img className="restaurant-name" src={swiggyIMageCDN+restaurant.cards[0]?.card?.card?.info.cloudinaryImageId} />
         <h2> {restaurant.cards[0]?.card?.card?.info.name} </h2>
         <h3> {restaurant.cards[0]?.card?.card?.info.city} </h3>
@@ -42,7 +44,7 @@ const RestaurantMenu = () => {
           //console.log(cardItems?.cards)
       //console.log(cardItems)
           
-        (restaurant?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards).map(
+        (restaurant[3]?.card?.card?.itemCards).map(
          (items,index)=>(
              <li key={index}> { items && items?.card?.info?.name} </li>
            )

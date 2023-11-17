@@ -13,15 +13,16 @@ const useRestaurant=()=>{
         );
         const json = await data.json();
         //console.log(json.data.cards[0]?.card?.card?.info);
-        //console.log(json.data);
+        console.log(json.data);
     
         //setRestaurant(json.data.cards[0]?.card?.card?.info);
-        setRestaurant(json.data);
+        setRestaurant(json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
         console.log(restaurant)
    
-        return restaurant;
+        
     
       }
+      return restaurant;
 }
 
 export default useRestaurant;

@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import RestrauntCard from "./RestrauntCard";
 import filterData from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import { useContext } from "react";
+import {info1} from "../utils/userContext"
 
 const Body = () => {
   // let searchTXT="KFC";
@@ -26,7 +28,7 @@ const Body = () => {
       "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+   // console.log(json);
 
     setRestraunts(
       json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -39,7 +41,7 @@ const Body = () => {
     );
   }
 
-  console.log("render");
+ // console.log("render");
 
   function filterData(searchTXT, restraunts){
     const filteredData=restraunts.filter((restaurant)=>restaurant.info.name.includes(searchTXT));
@@ -60,7 +62,7 @@ function filterData(searchTXT,restraunts) {
         // return restraunt.card?.card?.info.name.includes(searchTXT);
         return restraunt.info.name.includes(searchTXT);
     });
-    console.log(filterdata);
+    //console.log(filterdata);
     return filterdata;
 }
 
@@ -79,8 +81,8 @@ function filterData(searchTXT,restraunts) {
         <button className="p-2 m-2 bg-purple-50 text-black rounded-md"
           onClick={() => {
             //neeed to filter data
-            const data = filterData(searchTXT, allRestraunts);
-            console.log(data);
+            const data = filterData(searchTXT, filteredRestraunts);
+           // console.log(data);
             if (data.length) {
               setFilteredRestraunts(data);
               setSearchResult(true);
@@ -96,11 +98,13 @@ function filterData(searchTXT,restraunts) {
         >
           Search
         </button>
+        
+
       </div>
       <div className="flex flex-wrap-reverse">
         {filteredRestraunts.map((restraunt, index) => (
           <Link to={"/restaurant/" + restraunt?.info?.id}>
-            <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />
+            <RestrauntCard key={restraunt?.info?.id} {...restraunt.info}  />
           </Link>
         ))}
       </div>

@@ -2,6 +2,9 @@ import { useState } from "react";
 import About from "./About";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import userContext from "../utils/userContext";
+import { useContext } from "react";
+import info1 from "../utils/userContext";
 
 export const Title = () => {
   return (
@@ -20,8 +23,10 @@ export const Title = () => {
 const Header = () => {
   const isOnline = useOnline();
   const [isLoggedInUser, setIsLoggedInUser] = useState("true");
+  const {user}=useContext(info1);
+
   return (
-    <div className="flex justify-between bg-pink-50">
+    <div className="flex justify-between bg-pink-50 shadow-lg ">
       <Title />
       {isOnline ? (
         <div className="h-7 w-7 rounded-full bg-green-600 m-[10]"></div>
@@ -29,7 +34,9 @@ const Header = () => {
         <div className="h-7 w-7 rounded-full bg-gray-600 m-[10]"></div>
       )}
       <div className="">
+        
         <ul className="flex py-10">
+        <h1>{user.email}</h1>
           <Link to="/">
             <li className="px-5">Home</li>
           </Link>

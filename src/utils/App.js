@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import {createRoot} from "react-dom/client";
 import Header from "../components/Header";
 import Body from "../components/Body";
@@ -10,21 +10,36 @@ import { createBrowserRouter ,Outlet,RouterProvider,useParams,useRouteError} fro
 import RestaurantMenu from "../components/RestaurantMenu";
 import { lazy } from "react";
 import Shimmer from "../components/Shimmer";
+import { useContext } from "react";
+import info1 from "./userContext"
 
 
 const Instamart=lazy(()=>import("../components/InstaMart"));
 const Applayout = () => {
   const error=useRouteError();
   const {id}=useParams();
+
+  const [user1,setUser1]=useState({
+    name:"Chandan bhaiya",
+    email:"hb72102849@gmail.com"
+  });
+
+
   // const {id}=params;
-  console.log(id);  
-  console.log(error);
+ // console.log(id);  
+  //console.log(error);
   return (
-    <React.Fragment>
+
+    <info1.Provider value={{
+      user:user1,
+      setUser:setUser1
+
+    }}>
+      
       <Header />
       <Outlet/>
       <Footer />
-    </React.Fragment>
+    </info1.Provider>
   );
 };
 
@@ -36,7 +51,7 @@ const AppRouter=createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<Body/>
+        element:<Body />
       },
       {
         path:"/about",

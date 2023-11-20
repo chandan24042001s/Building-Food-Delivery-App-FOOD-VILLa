@@ -68,7 +68,7 @@ const InstaMart = () => {
         description={
           "Unveil my *PORTFOLIO*, a reflection of my dedication to delivering impactful web solutions, blending technical expertise with a keen eye for design and user experience that demonstrate proficiency …"
         }
-        isVisible={sectionConfig.showAbout}
+        isVisible={sectionConfig.showCarees}
         setIsVisible={()=>{
           setSectionConfig({
             showAbout:false,

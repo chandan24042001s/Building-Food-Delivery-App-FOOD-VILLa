@@ -5,6 +5,8 @@ import useOnline from "../utils/useOnline";
 import userContext from "../utils/userContext";
 import { useContext } from "react";
 import info1 from "../utils/userContext";
+import { useSelector } from "react-redux";
+import store from "../utils/store";
 
 export const Title = () => {
   return (
@@ -24,6 +26,9 @@ const Header = () => {
   const isOnline = useOnline();
   const [isLoggedInUser, setIsLoggedInUser] = useState("true");
   const {user}=useContext(info1);
+
+  const cartItems=useSelector((store)=>store.cart.items);
+
 
   return (
     <div className="flex justify-between bg-pink-50 shadow-lg ">
@@ -50,6 +55,11 @@ const Header = () => {
           <Link to="/instamart">
             <li className="px-5">Instamart</li>
           </Link>
+          <Link to="/cart">
+            <li className="px-5">Cart-{cartItems.length} items</li>
+          </Link>
+
+      
           {/* <div>{isLoggedInUser?
             (<button onClick={()=>{
                 setIsLoggedInUser("false");

@@ -12,6 +12,9 @@ import { lazy } from "react";
 import Shimmer from "../components/Shimmer";
 import { useContext } from "react";
 import info1 from "./userContext"
+import { Provider } from "react-redux";
+import store from "./store";
+import Cart from "../components/Cart";
 
 
 const Instamart=lazy(()=>import("../components/InstaMart"));
@@ -29,7 +32,7 @@ const Applayout = () => {
  // console.log(id);  
   //console.log(error);
   return (
-
+    <Provider store={store}>
     <info1.Provider value={{
       user:user1,
       setUser:setUser1
@@ -40,6 +43,7 @@ const Applayout = () => {
       <Outlet/>
       <Footer />
     </info1.Provider>
+    </Provider>
   );
 };
 
@@ -64,6 +68,10 @@ const AppRouter=createBrowserRouter([
       {
         path:"/restaurant/:id",
         element:<RestaurantMenu/>
+      },
+      {
+        path:"/cart",
+        element:<Cart/>
       },
       {
         path:"/instamart",

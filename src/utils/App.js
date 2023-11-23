@@ -92,3 +92,4 @@ const AppRouter=createBrowserRouter([
 const root = createRoot(document.getElementById("root"));
 
 root.render(<RouterProvider router={AppRouter} />);
+

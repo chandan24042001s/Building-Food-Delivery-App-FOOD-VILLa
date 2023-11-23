@@ -1,4 +1,5 @@
-// with options
 {
-    
-  }
+  // "presets": [
+  //   ["@babel/preset-react", {"runtime": "automatic"}]
+  // ]
+}

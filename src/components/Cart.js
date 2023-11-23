@@ -9,7 +9,7 @@ const Cart = () => {
     <div>
         <h1> Cart-Items-{cartItems.length}</h1>
         {/* //<FoodItem {...cartItems[0]}/> */}
-        <div>
+        <div className='flex flex-wrap'>
             {cartItems.map((item)=>(
                 <FoodItem {...item}/>
             ))}

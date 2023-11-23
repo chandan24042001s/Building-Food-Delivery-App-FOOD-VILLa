@@ -12,9 +12,10 @@ const RestrauntCard = (props) => {
           <h2 className="font-bold text-2xl">{props.name}</h2>
           <h4>{props.cuisines?.join(" ")}</h4>
           <h5>{props.avgRating} stars</h5>
-          <h4>{user.name}</h4>
+         
+          {/* <h4>{user.name}</h4>
 
-          <h4> {user.email} </h4>
+          <h4> {user.email} </h4> */}
           
         </div>
 

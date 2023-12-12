@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 import RestrauntCard from "./RestrauntCard";
 import filterData from "../utils/helper";
 import useOnline from "../utils/useOnline";
+import { useContext } from "react";
+import { info1 } from "../utils/userContext";
 
 const Body = () => {
   // let searchTXT="KFC";
   /** Every Component in react maintains a state*/
   const [searchTXT, setSearchTXT] = useState();
-  const [searchClick, setSearchClick] = useState("true");
   const [restraunts, setRestraunts] = useState([]);
+  const [searchResult, setSearchResult] = useState(true);
   const [filteredRestraunts, setFilteredRestraunts] = useState([]);
   const [allRestraunts, setAllRestraunts] = useState([]);
   const isOnline = useOnline();
@@ -26,59 +28,56 @@ const Body = () => {
       "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
 
     setRestraunts(
-      json.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setAllRestraunts(
-      json.data.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestraunts(
-      json.data.cards[2]?.card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
 
-  console.log("render");
+  const handleSearch = (event) => {
+    const searchResult = event.target.value.toLowerCase();
+    setSearchTXT(searchResult);
 
-  function filterData(searchTXT, restraunts){
-    const filteredData=restraunts.filter((restaurant)=>restaurant.info.name.includes(searchTXT));
-    // const filteredData= restraunts.filter((restraunts)=>{
-    //   // restraunts.filter()(restraunt.info.name.includes(searchTXT))
-    // }}
-    return filteredData;
-  }
+    const filtered = allRestraunts.filter((restaurant) =>
+      restaurant.info.name.toLowerCase().includes(searchResult)
+    );
+
+    if (filtered.length > 0) {
+      setFilteredRestraunts(filtered);
+    } else {
+      // If the search result is empty, show all restaurants
+      setFilteredRestraunts(allRestraunts);
+    }
+  };
 
   if (!isOnline) {
     return <h1> Offline hoo bhaiya</h1>;
   }
 
-  return filteredRestraunts.length == 0 ? (
+  return filteredRestraunts.length === 0 ? (
     <Shimmer />
   ) : (
     <>
-      <div className="p-5 bg-pink-50 my-4">
+      <div className="flex justify-center p-8">
         <input
           type="text"
-          placeholder="Search here"
-          className="px-3"
+          placeholder="Search  a restaurant you want..."
+          className="h-10 w-[30rem] px-4 border border-gray-400  text-Secondry text-base outline-none rounded-l"
           value={searchTXT}
-          onChange={(e) => {
-            setSearchTXT(e.target.value);
-          }}
+          onChange={handleSearch}
         ></input>
-        <button className="p-2 m-2 bg-purple-50 text-black rounded-md"
-          onClick={() => {
-            //neeed to filter data
-            const data = filterData(searchTXT, allRestraunts);
-            console.log(data);
-            setFilteredRestraunts(data);
-          }}
-        >
+        <button className="p-2 w-24 bg-LightOrange hover:bg-Green text-Secondry text-base rounded-r">
           Search
         </button>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap-reverse justify-center">
         {filteredRestraunts.map((restraunt, index) => (
           <Link to={"/restaurant/" + restraunt?.info?.id}>
             <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />

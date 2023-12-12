@@ -1,9 +1,9 @@
 function filterData(searchText, restraunts) {
     const filterdata = restraunts.filter((restraunt) => {
-      console.log(restraunt);
+     // console.log(restraunt);
       return restraunt.info.name.includes(searchText);
     });
-    console.log(filterdata);
+    //console.log(filterdata);
     return filterdata;
   }
 

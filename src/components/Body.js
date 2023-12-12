@@ -68,8 +68,8 @@ const Body = () => {
       <div className="flex justify-center p-8">
         <input
           type="text"
-          placeholder="Search  a restaurant you want..."
-          className="h-10 w-[30rem] px-4 border border-gray-400  text-Primary text-base outline-none rounded-l"
+          placeholder="Search here"
+          className="px-3"
           value={searchTXT}
           onChange={handleSearch}
         ></input>

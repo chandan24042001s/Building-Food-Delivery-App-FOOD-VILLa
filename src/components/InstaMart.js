@@ -1,30 +1,38 @@
 import React, { useState } from "react";
 
-const Section = ({ title, description ,isVisible,setIsVisible}) => {
+const Section = ({ title, description, isVisible, setIsVisible }) => {
   return (
-    <div className="border-4 border-black p-2 m-2">
+    <div className="border-4 border-Primary p-2 m-2">
       <h3 className="font-bold text-xl"> {title}</h3>
-{
-  isVisible?( <button onClick={()=>{
-      setIsVisible(false)
-     }}>Hide</button>):(
-        <button onClick={()=>{
-      setIsVisible(true)
-     }}>Show</button> 
-     )
-}
+      {isVisible ? (
+        <button
+          onClick={() => {
+            setIsVisible(false);
+          }}
+        >
+          Hide
+        </button>
+      ) : (
+        <button
+          onClick={() => {
+            setIsVisible(true);
+          }}
+        >
+          Show
+        </button>
+      )}
 
-      {isVisible && <p>{description}</p> }
+      {isVisible && <p>{description}</p>}
     </div>
   );
 };
 
 const InstaMart = () => {
-  const [sectionConfig,setSectionConfig]=useState({
-    showAbout:false,
-    showTeam:false,
-    showCarees:false
-  })
+  const [sectionConfig, setSectionConfig] = useState({
+    showAbout: false,
+    showTeam: false,
+    showCarees: false,
+  });
   return (
     <>
       <h1 className="text-4xl font-bold">InstaMart</h1>
@@ -36,14 +44,13 @@ const InstaMart = () => {
           "Unveil my *PORTFOLIO*, a reflection of my dedication to delivering impactful web solutions, blending technical expertise with a keen eye for design and user experience that demonstrate proficiency …"
         }
         isVisible={sectionConfig.showAbout}
-        setIsVisible={()=>{
+        setIsVisible={() => {
           setSectionConfig({
-            showAbout:true,
-            showTeam:false,
-            showCarees:false
-          })
+            showAbout: true,
+            showTeam: false,
+            showCarees: false,
+          });
         }}
-
       />
 
       <Section
@@ -52,15 +59,13 @@ const InstaMart = () => {
           "Unveil my *PORTFOLIO*, a reflection of my dedication to delivering impactful web solutions, blending technical expertise with a keen eye for design and user experience that demonstrate proficiency …"
         }
         isVisible={sectionConfig.showTeam}
-        setIsVisible={()=>{
+        setIsVisible={() => {
           setSectionConfig({
-            showAbout:false,
-            showTeam:true,
-            showCarees:false
-          })
+            showAbout: false,
+            showTeam: true,
+            showCarees: false,
+          });
         }}
-
-
       />
 
       <Section
@@ -69,14 +74,13 @@ const InstaMart = () => {
           "Unveil my *PORTFOLIO*, a reflection of my dedication to delivering impactful web solutions, blending technical expertise with a keen eye for design and user experience that demonstrate proficiency …"
         }
         isVisible={sectionConfig.showCarees}
-        setIsVisible={()=>{
+        setIsVisible={() => {
           setSectionConfig({
-            showAbout:false,
-            showTeam:false,
-            showCarees:true
-          })
+            showAbout: false,
+            showTeam: false,
+            showCarees: true,
+          });
         }}
-
       />
     </>
   );

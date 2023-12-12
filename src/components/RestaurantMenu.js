@@ -34,7 +34,6 @@ const RestaurantMenu = () => {
     <h1>MENU</h1>
       <div className="flex justify-center">
         <div> { " "}</div>
-        
         <ul className="">
       {
           (restaurant[5]?.card?.card?.itemCards).map(

@@ -1,15 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
 /* *{
     font-family: 'PT Sans' 'calibri', sans-serif;
 } */
-=======
-*{
-    font-family: 'PT Sans' 'calibri', sans-serif;
-}
->>>>>>> 06fd0907e982764de3cc640130f6c28b4d48a344
 
 #shadow{
     box-shadow: -1px 5px 10px 5px rgba(112,112,112,.2);

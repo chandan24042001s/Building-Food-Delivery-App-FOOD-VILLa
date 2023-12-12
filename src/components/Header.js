@@ -7,22 +7,15 @@ import { useContext } from "react";
 import info1 from "../utils/userContext";
 import { useSelector } from "react-redux";
 import store from "../utils/store";
-<<<<<<< HEAD
 
-=======
->>>>>>> 06fd0907e982764de3cc640130f6c28b4d48a344
 
 export const Title = () => {
   return (
     <a href="/">
       {" "}
-<<<<<<< HEAD
       <img className="h-28 p-4 px-20"
        src="https://yt3.googleusercontent.com/ytc/APkrFKbdlznuS6EWkb_5TSayH6s7nZloQDA3tSpHdJeV=s900-c-k-c0x00ffffff-no-rj"
         alt="Logo" />
-=======
-      <img className="h-28 p-2" src="" alt="Logo" />
->>>>>>> 06fd0907e982764de3cc640130f6c28b4d48a344
     </a>
   );
 }; //name export
@@ -40,12 +33,8 @@ const Header = () => {
       className="flex justify-between items-center h-20  font-bold"
       id="shadow"
     >
-<<<<<<< HEAD
       <Title/>
       
-=======
-      <Title />
->>>>>>> 06fd0907e982764de3cc640130f6c28b4d48a344
 
       <div className=" mr-3">
         <ul className="flex gap-x-1 items-center">

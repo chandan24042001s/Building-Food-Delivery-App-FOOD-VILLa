@@ -32,7 +32,7 @@ import Intro from "./Intro";
 // }
 
 const About = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [btntxt, setbtntxt] = useState(true);
   const handletxt = ()=>{
     setbtntxt(!btntxt);
@@ -45,7 +45,7 @@ const About = () => {
         onClick={handletxt}
       >
         {
-          btntxt? "Show My Profile": "Hide My Profile"
+          btntxt? "Hide My Profile":"Show My Profile"
         }
       </div>
     </div>

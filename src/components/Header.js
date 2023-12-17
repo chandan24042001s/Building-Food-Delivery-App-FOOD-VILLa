@@ -55,7 +55,7 @@ const Header = () => {
           </Link> */}
           <Link to="/cart">
             <li className="text-Primary hover:text-Secondry hover:bg-Orange  h-10 w-10 pt-2 text-center rounded-lg">
-              <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
             </li>
             {/* {cartItems.length}  */}
           </Link>

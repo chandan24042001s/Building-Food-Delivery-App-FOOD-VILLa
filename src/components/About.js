@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Profile from "./Profile";
 import ProfileClass from "./ProfileClass";
+import Intro from "./Intro";
 // class About extends React.Component {
 //    constructor(props){
 //         super(props);
@@ -31,9 +32,27 @@ import ProfileClass from "./ProfileClass";
 // }
 
 const About = () => {
+  const [show, setShow] = useState(false);
+  const [btntxt, setbtntxt] = useState(true);
+  const handletxt = ()=>{
+    setbtntxt(!btntxt);
+    setShow(!show)
+  }
   return (
     <>
-      <div className="flex justify-center items-center pt-28">
+    <div className="flex justify-center items-center">
+      <div className="p-3 m-6 text-base text-center text-White font-bold font-PT rounded-lg bg-Orange h-[45px] w-[140px] "
+        onClick={handletxt}
+      >
+        {
+          btntxt? "Show My Profile": "Hide My Profile"
+        }
+      </div>
+    </div>
+       {
+      show ?<Intro/>: null
+    }
+      <div className="flex justify-center items-center p-10">
         <div className="ml-32 mr-32 ">
           <h1 className="w-[400px] font-bold text-[70px] text-Primary">
             Welcome to The world of

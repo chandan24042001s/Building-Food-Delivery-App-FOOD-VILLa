@@ -28,7 +28,7 @@ const Body = () => {
       "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    // console.log(json);
+    console.log(json);
 
     setRestraunts(
       json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants

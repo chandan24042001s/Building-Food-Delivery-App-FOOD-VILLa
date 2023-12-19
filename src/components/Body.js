@@ -25,19 +25,19 @@ const Body = () => {
 
   async function getRestraunt() {
     const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/mapi/homepage/getCards?lat=28.4594965&lng=77.0266383"
     );
     const json = await data.json();
     console.log(json);
 
     setRestraunts(
-      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
     );
     setAllRestraunts(
-      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestraunts(
-      json.data.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
     );
   }
 

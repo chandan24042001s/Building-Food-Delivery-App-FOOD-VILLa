@@ -1,18 +1,16 @@
 import { useState } from "react";
-import About from "./About";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-import userContext from "../utils/userContext";
 import { useContext } from "react";
 import info1 from "../utils/userContext";
 import { useSelector } from "react-redux";
-import store from "../utils/store";
+
 
 export const Title = () => {
   return (
     <a href="/">
       {" "}
-      <img className="h-28 p-2" src="" alt="Logo" />
+      <img className="h-24 p-2 pl-8" src={require("../Images/FoodVilla.jpeg")} alt="" />
     </a>
   );
 }; //name export
@@ -30,7 +28,7 @@ const Header = () => {
       className="flex justify-between items-center h-20  font-bold"
       id="shadow"
     >
-      <Title />
+      <Title/>
 
       <div className=" mr-3">
         <ul className="flex gap-x-1 items-center">
@@ -55,7 +53,7 @@ const Header = () => {
           </Link> */}
           <Link to="/cart">
             <li className="text-Primary hover:text-Secondry hover:bg-Orange  h-10 w-10 pt-2 text-center rounded-lg">
-            <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
             </li>
             {/* {cartItems.length}  */}
           </Link>

@@ -620,7 +620,7 @@ const Section = ({ title, description, isVisible, setIsVisible })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 9,
+                lineNumber: 6,
                 columnNumber: 7
             }, undefined),
             isVisible ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -630,8 +630,8 @@ const Section = ({ title, description, isVisible, setIsVisible })=>{
                 children: "Hide"
             }, void 0, false, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 10,
-                columnNumber: 20
+                lineNumber: 8,
+                columnNumber: 9
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>{
                     setIsVisible(true);
@@ -639,21 +639,21 @@ const Section = ({ title, description, isVisible, setIsVisible })=>{
                 children: "Show"
             }, void 0, false, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 14,
-                columnNumber: 21
+                lineNumber: 16,
+                columnNumber: 9
             }, undefined),
             isVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 children: description
             }, void 0, false, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 20,
+                lineNumber: 25,
                 columnNumber: 21
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/InstaMart.js",
-        lineNumber: 8,
-        columnNumber: 10
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = Section;
@@ -671,7 +671,7 @@ const InstaMart = ()=>{
                 children: "InstaMart"
             }, void 0, false, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 30,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -679,7 +679,7 @@ const InstaMart = ()=>{
                 children: "100s of companies inside it"
             }, void 0, false, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 31,
+                lineNumber: 39,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -695,7 +695,7 @@ const InstaMart = ()=>{
                 }
             }, void 0, false, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 33,
+                lineNumber: 41,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -711,7 +711,7 @@ const InstaMart = ()=>{
                 }
             }, void 0, false, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 41,
+                lineNumber: 56,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Section, {
@@ -727,13 +727,13 @@ const InstaMart = ()=>{
                 }
             }, void 0, false, {
                 fileName: "src/components/InstaMart.js",
-                lineNumber: 49,
+                lineNumber: 71,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(InstaMart, "m4hZEP1d+A1umC/cvONsEu7Eqqc=");
+_s(InstaMart, "cNXQAf7Iw4Z3rAEF9PMm/JPG+OE=");
 _c1 = InstaMart;
 exports.default = InstaMart;
 var _c, _c1;

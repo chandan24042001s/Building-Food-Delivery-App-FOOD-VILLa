@@ -2999,32 +2999,32 @@ const Applayout = ()=>{
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 39,
+                    lineNumber: 48,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 41,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 42,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/utils/App.js",
-            lineNumber: 35,
+            lineNumber: 42,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/utils/App.js",
-        lineNumber: 34,
-        columnNumber: 10
+        lineNumber: 41,
+        columnNumber: 5
     }, undefined);
 };
-_s(Applayout, "nbQKmGK+guFUnoJNPCMl8M6QNJ4=", false, function() {
+_s(Applayout, "r+Ft1LWFx7Ggxu/fhvTKP6egqBY=", false, function() {
     return [
         (0, _reactRouterDom.useRouteError),
         (0, _reactRouterDom.useParams)
@@ -3036,61 +3036,61 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Applayout, {}, void 0, false, {
             fileName: "src/utils/App.js",
-            lineNumber: 48,
-            columnNumber: 12
+            lineNumber: 60,
+            columnNumber: 14
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/utils/App.js",
-            lineNumber: 49,
-            columnNumber: 17
+            lineNumber: 61,
+            columnNumber: 19
         }, undefined),
         children: [
             {
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 52,
-                    columnNumber: 14
+                    lineNumber: 65,
+                    columnNumber: 18
                 }, undefined)
             },
             {
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 55,
-                    columnNumber: 14
+                    lineNumber: 69,
+                    columnNumber: 18
                 }, undefined)
             },
             {
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 58,
-                    columnNumber: 14
+                    lineNumber: 73,
+                    columnNumber: 18
                 }, undefined)
             },
             {
                 path: "/restaurant/:id",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 61,
-                    columnNumber: 14
+                    lineNumber: 77,
+                    columnNumber: 18
                 }, undefined)
             },
             {
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 64,
-                    columnNumber: 14
+                    lineNumber: 81,
+                    columnNumber: 18
                 }, undefined)
             },
             {
                 path: "/login",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 67,
-                    columnNumber: 14
+                    lineNumber: 85,
+                    columnNumber: 18
                 }, undefined)
             },
             {
@@ -3099,13 +3099,13 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, void 0, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Instamart, {}, void 0, false, {
                         fileName: "src/utils/App.js",
-                        lineNumber: 71,
+                        lineNumber: 92,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 70,
-                    columnNumber: 14
+                    lineNumber: 91,
+                    columnNumber: 11
                 }, undefined)
             }
         ]
@@ -3116,7 +3116,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: AppRouter
 }, void 0, false, {
     fileName: "src/utils/App.js",
-    lineNumber: 76,
+    lineNumber: 102,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -27345,14 +27345,14 @@ const Title = ()=>{
                 alt: ""
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 10,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 8,
-        columnNumber: 10
+        lineNumber: 11,
+        columnNumber: 5
     }, undefined);
 }; //name export
 _c = Title;
@@ -27369,7 +27369,7 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 23,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27384,12 +27384,12 @@ const Header = ()=>{
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 28,
+                                lineNumber: 36,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 27,
+                            lineNumber: 35,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27399,12 +27399,12 @@ const Header = ()=>{
                                 children: "About"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 33,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 32,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27414,12 +27414,12 @@ const Header = ()=>{
                                 children: "Contact"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 39,
+                                lineNumber: 47,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 38,
+                            lineNumber: 46,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27430,17 +27430,17 @@ const Header = ()=>{
                                     class: "fa-solid fa-cart-shopping"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 48,
+                                    lineNumber: 56,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 47,
+                                lineNumber: 55,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 46,
+                            lineNumber: 54,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -27453,45 +27453,45 @@ const Header = ()=>{
                                         className: "h-3 w-3 rounded-full bg-LightGreen absolute right-1 top-4 "
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
-                                        lineNumber: 55,
-                                        columnNumber: 27
+                                        lineNumber: 64,
+                                        columnNumber: 17
                                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "h-3 w-3 rounded-full bg-gray-600 "
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
-                                        lineNumber: 55,
-                                        columnNumber: 112
+                                        lineNumber: 66,
+                                        columnNumber: 17
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 53,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 52,
+                            lineNumber: 60,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 26,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 25,
+                lineNumber: 33,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 22,
-        columnNumber: 10
+        lineNumber: 27,
+        columnNumber: 5
     }, undefined);
 };
-_s(Header, "4gLvWS6TP/jEfcs3iU7NIc02II0=", false, function() {
+_s(Header, "etfa8xTG8sw0Ul6LQclBQzJUrXM=", false, function() {
     return [
         (0, _useOnlineDefault.default),
         (0, _reactRedux.useSelector)
@@ -33825,7 +33825,7 @@ const useOnline = ()=>{
     }, []);
     return isOnline;
 };
-_s(useOnline, "mRBquyBAMh60D2Q5WI/A8/L/7j4=");
+_s(useOnline, "tQ+jeuTfaQWyt2cny0PnlZvq2jE=");
 exports.default = useOnline;
 
   $parcel$ReactRefreshHelpers$03b2.postlude(module);
@@ -35937,13 +35937,13 @@ const Body = ()=>{
         children: " Offline hoo bhaiya"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 43,
+        lineNumber: 59,
         columnNumber: 12
     }, undefined);
     return filteredRestraunts.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 45,
-        columnNumber: 44
+        lineNumber: 63,
+        columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35957,7 +35957,7 @@ const Body = ()=>{
                         onChange: handleSearch
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 47,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35965,13 +35965,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 48,
+                        lineNumber: 74,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 46,
+                lineNumber: 66,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35982,17 +35982,17 @@ const Body = ()=>{
                             ...restraunt.info
                         }, restraunt?.info?.id, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 54,
+                            lineNumber: 81,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 53,
-                        columnNumber: 55
+                        lineNumber: 80,
+                        columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 52,
+                lineNumber: 78,
                 columnNumber: 7
             }, undefined)
         ]
@@ -36436,7 +36436,7 @@ const Shimmer = ()=>{
                         className: "h-10 w-[30rem] px-4 border border-gray-400  text-Secondry text-base outline-none rounded-l"
                     }, void 0, false, {
                         fileName: "src/components/Shimmer.js",
-                        lineNumber: 5,
+                        lineNumber: 7,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -36444,13 +36444,13 @@ const Shimmer = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Shimmer.js",
-                        lineNumber: 6,
+                        lineNumber: 12,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Shimmer.js",
-                lineNumber: 4,
+                lineNumber: 6,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36466,12 +36466,12 @@ const Shimmer = ()=>{
                                         id: "loader-element"
                                     }, void 0, false, {
                                         fileName: "src/components/Shimmer.js",
-                                        lineNumber: 15,
+                                        lineNumber: 28,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Shimmer.js",
-                                    lineNumber: 14,
+                                    lineNumber: 27,
                                     columnNumber: 17
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36480,12 +36480,12 @@ const Shimmer = ()=>{
                                         id: "loader-element"
                                     }, void 0, false, {
                                         fileName: "src/components/Shimmer.js",
-                                        lineNumber: 18,
+                                        lineNumber: 31,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Shimmer.js",
-                                    lineNumber: 17,
+                                    lineNumber: 30,
                                     columnNumber: 17
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36494,12 +36494,12 @@ const Shimmer = ()=>{
                                         id: "loader-element"
                                     }, void 0, false, {
                                         fileName: "src/components/Shimmer.js",
-                                        lineNumber: 21,
+                                        lineNumber: 34,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Shimmer.js",
-                                    lineNumber: 20,
+                                    lineNumber: 33,
                                     columnNumber: 17
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36509,24 +36509,24 @@ const Shimmer = ()=>{
                                         id: "loader-element"
                                     }, void 0, false, {
                                         fileName: "src/components/Shimmer.js",
-                                        lineNumber: 24,
+                                        lineNumber: 37,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Shimmer.js",
-                                    lineNumber: 23,
+                                    lineNumber: 36,
                                     columnNumber: 17
                                 }, undefined)
                             ]
                         }, index, true, {
                             fileName: "src/components/Shimmer.js",
-                            lineNumber: 13,
+                            lineNumber: 22,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false))
             }, void 0, false, {
                 fileName: "src/components/Shimmer.js",
-                lineNumber: 11,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined)
         ]
@@ -36578,7 +36578,7 @@ const RestrauntCard = (props)=>{
                     children: props.name
                 }, void 0, false, {
                     fileName: "src/components/RestrauntCard.js",
-                    lineNumber: 11,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -36586,7 +36586,7 @@ const RestrauntCard = (props)=>{
                     children: props.cuisines?.join(" ")
                 }, void 0, false, {
                     fileName: "src/components/RestrauntCard.js",
-                    lineNumber: 12,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36596,14 +36596,14 @@ const RestrauntCard = (props)=>{
                             class: "fa-solid fa-star p-1"
                         }, void 0, false, {
                             fileName: "src/components/RestrauntCard.js",
-                            lineNumber: 14,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, undefined),
                         props.avgRating
                     ]
                 }, void 0, true, {
                     fileName: "src/components/RestrauntCard.js",
-                    lineNumber: 13,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, undefined)
             ]
@@ -36615,10 +36615,10 @@ const RestrauntCard = (props)=>{
     }, void 0, false, {
         fileName: "src/components/RestrauntCard.js",
         lineNumber: 8,
-        columnNumber: 10
+        columnNumber: 5
     }, undefined);
 };
-_s(RestrauntCard, "fV01W0EFhpxcsxwq9eE2kaSNZKA=");
+_s(RestrauntCard, "y3FQDew7UyrSqYkvQcTdCsLbAB8=");
 _c = RestrauntCard;
 exports.default = RestrauntCard; /***
  * app.js(props)
@@ -36680,17 +36680,17 @@ const About = ()=>{
                     children: btntxt ? "Show My Profile" : "Hide My Profile"
                 }, void 0, false, {
                     fileName: "src/components/About.js",
-                    lineNumber: 12,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/About.js",
-                lineNumber: 11,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined),
             show ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _introDefault.default), {}, void 0, false, {
                 fileName: "src/components/About.js",
-                lineNumber: 16,
+                lineNumber: 21,
                 columnNumber: 15
             }, undefined) : null,
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36703,7 +36703,7 @@ const About = ()=>{
                                 children: "Welcome to The world of"
                             }, void 0, false, {
                                 fileName: "src/components/About.js",
-                                lineNumber: 19,
+                                lineNumber: 24,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -36711,7 +36711,7 @@ const About = ()=>{
                                 children: "Tasty & Fresh Food"
                             }, void 0, false, {
                                 fileName: "src/components/About.js",
-                                lineNumber: 22,
+                                lineNumber: 27,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -36723,20 +36723,20 @@ const About = ()=>{
                                         children: "Villa"
                                     }, void 0, false, {
                                         fileName: "src/components/About.js",
-                                        lineNumber: 27,
+                                        lineNumber: 32,
                                         columnNumber: 13
                                     }, undefined),
                                     ' healthy meal"'
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/About.js",
-                                lineNumber: 25,
+                                lineNumber: 30,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/About.js",
-                        lineNumber: 18,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36744,18 +36744,18 @@ const About = ()=>{
                             src: "https://foodfire-app.netlify.app/burger-image.ec55d069.png"
                         }, void 0, false, {
                             fileName: "src/components/About.js",
-                            lineNumber: 31,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/About.js",
-                        lineNumber: 30,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/About.js",
-                lineNumber: 17,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined)
         ]
@@ -36807,7 +36807,7 @@ const Intro = ()=>{
                         children: "About Me"
                     }, void 0, false, {
                         fileName: "src/components/Intro.js",
-                        lineNumber: 5,
+                        lineNumber: 10,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -36815,7 +36815,7 @@ const Intro = ()=>{
                         className: " rounded-full m-4 h-[150px] w-[150px] "
                     }, void 0, false, {
                         fileName: "src/components/Intro.js",
-                        lineNumber: 6,
+                        lineNumber: 11,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -36823,7 +36823,7 @@ const Intro = ()=>{
                         children: "React.js | Next.js | 20k+ @Linkdin | JavaScript | Frontend Developer"
                     }, void 0, false, {
                         fileName: "src/components/Intro.js",
-                        lineNumber: 7,
+                        lineNumber: 14,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -36834,12 +36834,12 @@ const Intro = ()=>{
                                     class: "fa-brands fa-linkedin"
                                 }, void 0, false, {
                                     fileName: "src/components/Intro.js",
-                                    lineNumber: 11,
+                                    lineNumber: 18,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Intro.js",
-                                lineNumber: 11,
+                                lineNumber: 18,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -36847,12 +36847,12 @@ const Intro = ()=>{
                                     class: "fa-brands fa-github"
                                 }, void 0, false, {
                                     fileName: "src/components/Intro.js",
-                                    lineNumber: 12,
+                                    lineNumber: 19,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Intro.js",
-                                lineNumber: 12,
+                                lineNumber: 19,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -36860,12 +36860,12 @@ const Intro = ()=>{
                                     class: "fa-solid fa-envelope"
                                 }, void 0, false, {
                                     fileName: "src/components/Intro.js",
-                                    lineNumber: 13,
+                                    lineNumber: 20,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Intro.js",
-                                lineNumber: 13,
+                                lineNumber: 20,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -36873,24 +36873,24 @@ const Intro = ()=>{
                                     class: "fa-brands fa-square-twitter"
                                 }, void 0, false, {
                                     fileName: "src/components/Intro.js",
-                                    lineNumber: 14,
+                                    lineNumber: 21,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Intro.js",
-                                lineNumber: 14,
+                                lineNumber: 21,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Intro.js",
-                        lineNumber: 10,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Intro.js",
-                lineNumber: 4,
+                lineNumber: 6,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36906,14 +36906,14 @@ const Intro = ()=>{
                                 children: "Villa"
                             }, void 0, false, {
                                 fileName: "src/components/Intro.js",
-                                lineNumber: 19,
+                                lineNumber: 26,
                                 columnNumber: 16
                             }, undefined),
                             " App Github Repository"
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Intro.js",
-                        lineNumber: 18,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36927,7 +36927,7 @@ const Intro = ()=>{
                                     children: "Namaste-React"
                                 }, void 0, false, {
                                     fileName: "src/components/Intro.js",
-                                    lineNumber: 24,
+                                    lineNumber: 34,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -36935,7 +36935,7 @@ const Intro = ()=>{
                                     children: "\u2764 Namaste React Live Course from Zero to Hero \uD83D\uDE80 by Akshay Saini(Founder of NamasteDev). This repository for Assignment & Class Notes taken during Namaste React Live Course #namaste #javascript #react"
                                 }, void 0, false, {
                                     fileName: "src/components/Intro.js",
-                                    lineNumber: 27,
+                                    lineNumber: 40,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -36947,14 +36947,14 @@ const Intro = ()=>{
                                                     class: "fa-solid fa-user-group text-Orange mr-1"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Intro.js",
-                                                    lineNumber: 34,
+                                                    lineNumber: 47,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 "Followers"
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Intro.js",
-                                            lineNumber: 34,
+                                            lineNumber: 47,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -36963,14 +36963,14 @@ const Intro = ()=>{
                                                     class: "fa-solid fa-code-fork text-Orange mr-1"
                                                 }, void 0, false, {
                                                     fileName: "src/components/Intro.js",
-                                                    lineNumber: 35,
+                                                    lineNumber: 48,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 "Forks"
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Intro.js",
-                                            lineNumber: 35,
+                                            lineNumber: 48,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -36980,44 +36980,44 @@ const Intro = ()=>{
                                                     children: " "
                                                 }, void 0, false, {
                                                     fileName: "src/components/Intro.js",
-                                                    lineNumber: 36,
+                                                    lineNumber: 49,
                                                     columnNumber: 19
                                                 }, undefined),
                                                 "Stars"
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Intro.js",
-                                            lineNumber: 36,
+                                            lineNumber: 49,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Intro.js",
-                                    lineNumber: 33,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Intro.js",
-                            lineNumber: 23,
+                            lineNumber: 30,
                             columnNumber: 9
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Intro.js",
-                        lineNumber: 21,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Intro.js",
-                lineNumber: 17,
+                lineNumber: 24,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Intro.js",
-        lineNumber: 3,
-        columnNumber: 10
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = Intro;
@@ -37056,14 +37056,14 @@ const Error = ()=>{
                 children: "Oops !!!"
             }, void 0, false, {
                 fileName: "src/components/Error.js",
-                lineNumber: 6,
+                lineNumber: 8,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "Something got wrong"
             }, void 0, false, {
                 fileName: "src/components/Error.js",
-                lineNumber: 7,
+                lineNumber: 9,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -37073,7 +37073,7 @@ const Error = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Error.js",
-                lineNumber: 8,
+                lineNumber: 10,
                 columnNumber: 5
             }, undefined)
         ]
@@ -37112,7 +37112,7 @@ const Contact = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
                 fileName: "src/components/Contact.js",
-                lineNumber: 4,
+                lineNumber: 6,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -37124,7 +37124,7 @@ const Contact = ()=>{
                             class: "absolute -top-2 -left-2 -right-2 -bottom-2 rounded-lg bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 shadow-lg animate-pulse"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 14,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -37142,7 +37142,7 @@ const Contact = ()=>{
                                                 children: "Contact us"
                                             }, void 0, false, {
                                                 fileName: "src/components/Contact.js",
-                                                lineNumber: 19,
+                                                lineNumber: 24,
                                                 columnNumber: 13
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -37152,7 +37152,7 @@ const Contact = ()=>{
                                                 id: "shadow-1"
                                             }, void 0, false, {
                                                 fileName: "src/components/Contact.js",
-                                                lineNumber: 20,
+                                                lineNumber: 25,
                                                 columnNumber: 13
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -37162,7 +37162,7 @@ const Contact = ()=>{
                                                 id: "shadow-1"
                                             }, void 0, false, {
                                                 fileName: "src/components/Contact.js",
-                                                lineNumber: 21,
+                                                lineNumber: 31,
                                                 columnNumber: 13
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
@@ -37172,7 +37172,7 @@ const Contact = ()=>{
                                                 id: "shadow-1"
                                             }, void 0, false, {
                                                 fileName: "src/components/Contact.js",
-                                                lineNumber: 22,
+                                                lineNumber: 37,
                                                 columnNumber: 13
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -37181,46 +37181,46 @@ const Contact = ()=>{
                                                 children: "Send Message"
                                             }, void 0, false, {
                                                 fileName: "src/components/Contact.js",
-                                                lineNumber: 23,
+                                                lineNumber: 43,
                                                 columnNumber: 12
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/Contact.js",
-                                        lineNumber: 18,
+                                        lineNumber: 23,
                                         columnNumber: 11
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Contact.js",
-                                    lineNumber: 17,
+                                    lineNumber: 22,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Contact.js",
-                                lineNumber: 16,
+                                lineNumber: 18,
                                 columnNumber: 11
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 15,
+                            lineNumber: 17,
                             columnNumber: 13
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Contact.js",
-                    lineNumber: 13,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Contact.js",
-                lineNumber: 12,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Contact.js",
-        lineNumber: 3,
-        columnNumber: 10
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = Contact;
@@ -37254,10 +37254,10 @@ const Footer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
         fileName: "src/components/Footer.js",
         lineNumber: 7,
-        columnNumber: 10
+        columnNumber: 5
     }, undefined);
 };
-_s(Footer, "fV01W0EFhpxcsxwq9eE2kaSNZKA=");
+_s(Footer, "JGtbL9nF23m+KDtp3kj55mw9GTc=");
 _c = Footer;
 exports.default = Footer;
 var _c;
@@ -37312,24 +37312,24 @@ const RestaurantMenu = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 24,
+                lineNumber: 29,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 26,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             restaurant && restaurant.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 28,
-                columnNumber: 47
+                lineNumber: 33,
+                columnNumber: 45
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "MENU"
             }, void 0, false, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 29,
+                lineNumber: 34,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -37342,7 +37342,7 @@ const RestaurantMenu = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 31,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -37359,34 +37359,34 @@ const RestaurantMenu = ()=>{
                                         children: " + Add to Cart"
                                     }, void 0, false, {
                                         fileName: "src/components/RestaurantMenu.js",
-                                        lineNumber: 36,
+                                        lineNumber: 45,
                                         columnNumber: 22
                                     }, undefined)
                                 ]
                             }, items.id, true, {
                                 fileName: "src/components/RestaurantMenu.js",
-                                lineNumber: 35,
-                                columnNumber: 9
+                                lineNumber: 42,
+                                columnNumber: 17
                             }, undefined))
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 32,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 30,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 23,
-        columnNumber: 10
+        lineNumber: 28,
+        columnNumber: 5
     }, undefined);
 };
-_s(RestaurantMenu, "s8vSM+57OrdS7DU0/EYuUKJOxZ0=", false, function() {
+_s(RestaurantMenu, "vfuso7gU9K5wREdz2V3ZOs50ULc=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _reactRedux.useDispatch),
@@ -41442,7 +41442,7 @@ const Cart = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Cart.js",
-                lineNumber: 8,
+                lineNumber: 10,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41451,19 +41451,19 @@ const Cart = ()=>{
                         ...item
                     }, void 0, false, {
                         fileName: "src/components/Cart.js",
-                        lineNumber: 11,
-                        columnNumber: 36
+                        lineNumber: 14,
+                        columnNumber: 17
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Cart.js",
-                lineNumber: 10,
+                lineNumber: 12,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Cart.js",
-        lineNumber: 7,
-        columnNumber: 10
+        lineNumber: 9,
+        columnNumber: 5
     }, undefined);
 };
 _s(Cart, "sOGYiwJY+kD+ABxufRt7JbvggIE=", false, function() {
@@ -41504,7 +41504,7 @@ const FoodItem = (items)=>{
                     src: (0, _constant.swiggyIMageCDN) + items?.card?.info?.imageId
                 }, void 0, false, {
                     fileName: "src/components/FoodItem.js",
-                    lineNumber: 7,
+                    lineNumber: 9,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -41515,7 +41515,7 @@ const FoodItem = (items)=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/components/FoodItem.js",
-                    lineNumber: 8,
+                    lineNumber: 11,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -41526,7 +41526,7 @@ const FoodItem = (items)=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/components/FoodItem.js",
-                    lineNumber: 9,
+                    lineNumber: 12,
                     columnNumber: 13
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -41537,19 +41537,19 @@ const FoodItem = (items)=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/components/FoodItem.js",
-                    lineNumber: 10,
+                    lineNumber: 13,
                     columnNumber: 13
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/FoodItem.js",
-            lineNumber: 5,
+            lineNumber: 7,
             columnNumber: 9
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/FoodItem.js",
-        lineNumber: 4,
-        columnNumber: 10
+        lineNumber: 6,
+        columnNumber: 5
     }, undefined);
 };
 _c = FoodItem;
@@ -41593,7 +41593,7 @@ const Search = ()=>{
                 }
             }, void 0, false, {
                 fileName: "src/components/Search.js",
-                lineNumber: 8,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41610,14 +41610,14 @@ const Search = ()=>{
                 children: "Search"
             }, void 0, false, {
                 fileName: "src/components/Search.js",
-                lineNumber: 11,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Search.js",
-        lineNumber: 7,
-        columnNumber: 10
+        lineNumber: 9,
+        columnNumber: 5
     }, undefined);
 };
 _s(Search, "QiQ9wwep6qzsfMMviLV1ROfTtKQ=");
@@ -41654,7 +41654,7 @@ const Login = ()=>{
                     children: "Login"
                 }, void 0, false, {
                     fileName: "src/components/Login.js",
-                    lineNumber: 5,
+                    lineNumber: 7,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -41664,7 +41664,7 @@ const Login = ()=>{
                     id: "shadow1"
                 }, void 0, false, {
                     fileName: "src/components/Login.js",
-                    lineNumber: 6,
+                    lineNumber: 8,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -41674,7 +41674,7 @@ const Login = ()=>{
                     id: "shadow"
                 }, void 0, false, {
                     fileName: "src/components/Login.js",
-                    lineNumber: 7,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41682,19 +41682,19 @@ const Login = ()=>{
                     children: "Login"
                 }, void 0, false, {
                     fileName: "src/components/Login.js",
-                    lineNumber: 8,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Login.js",
-            lineNumber: 4,
+            lineNumber: 6,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Login.js",
-        lineNumber: 3,
-        columnNumber: 10
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = Login;

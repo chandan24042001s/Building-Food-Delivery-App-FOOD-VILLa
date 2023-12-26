@@ -1,4 +1,4 @@
-import { restrauntlist, swiggyIMageCDN } from "../../constant";
+import { HOME_PAGE_URL, restrauntlist, swiggyIMageCDN } from "../../constant";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -23,21 +23,19 @@ const Body = () => {
     getRestraunt();
   }, []);
 
-  async function getRestraunt() {
-    const data = await fetch(
-      "https://www.swiggy.com/mapi/homepage/getCards?lat=28.4594965&lng=77.0266383"
-    );
+  const getRestraunt = async () => {
+    const data = await fetch(HOME_PAGE_URL);
     const json = await data.json();
     console.log(json);
 
     setRestraunts(
-      json.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setAllRestraunts(
-      json.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestraunts(
-      json.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
 

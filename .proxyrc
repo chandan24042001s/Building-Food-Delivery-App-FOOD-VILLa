@@ -1,0 +1,10 @@
+{
+  "/dapi/restaurants/list/v5": {
+    "target": "https://www.swiggy.com/",
+    "changeOrigin": true
+  },
+  "/dapi/menu/pl": {
+    "target": "https://www.swiggy.com/",
+    "changeOrigin": true
+  }
+}

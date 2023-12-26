@@ -5,7 +5,8 @@ export const Paneer="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkG
 
 export const swiggyIMageCDN="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
 
-
+export const HOME_PAGE_URL =
+"/dapi/restaurants/list/v5?lat=28.5987633&lng=77.0786143&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 export const restrauntlist=[
     {

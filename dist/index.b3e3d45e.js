@@ -35918,7 +35918,9 @@ const Body = ()=>{
         getRestraunt();
     }, []);
     const getRestraunt = async ()=>{
-        const data = await fetch((0, _constant.HOME_PAGE_URL));
+        const data = await fetch((0, _constant.HOME_PAGE_URL), {
+            mode: "no-cors"
+        });
         const json = await data.json();
         console.log(json);
         setRestraunts(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -35937,12 +35939,12 @@ const Body = ()=>{
         children: " Offline hoo bhaiya"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 59,
+        lineNumber: 61,
         columnNumber: 12
     }, undefined);
     return filteredRestraunts.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 63,
+        lineNumber: 65,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -35957,7 +35959,7 @@ const Body = ()=>{
                         onChange: handleSearch
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 67,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35965,13 +35967,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 74,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 66,
+                lineNumber: 68,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35982,17 +35984,17 @@ const Body = ()=>{
                             ...restraunt.info
                         }, restraunt?.info?.id, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 81,
+                            lineNumber: 83,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 80,
+                        lineNumber: 82,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 78,
+                lineNumber: 80,
                 columnNumber: 7
             }, undefined)
         ]

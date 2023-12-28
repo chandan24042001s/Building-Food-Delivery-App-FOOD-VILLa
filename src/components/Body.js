@@ -24,10 +24,15 @@ const Body = () => {
   }, []);
 
   const getRestraunt = async () => {
-    const data = await fetch(HOME_PAGE_URL, {
-      mode: 'no-cors',method:'GET'
-
- });
+const data = await fetch(HOME_PAGE_URL, {
+  mode: 'no-cors',
+  method: 'GET',
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+    'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
+  },
+});
     const json = await data.json();
     console.log(json);
 

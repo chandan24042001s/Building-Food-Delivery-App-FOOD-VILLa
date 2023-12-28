@@ -25,7 +25,8 @@ const Body = () => {
 
   const getRestraunt = async () => {
     const data = await fetch(HOME_PAGE_URL, {
-      mode: 'no-cors'
+      mode: 'no-cors',method:'GET'
+
  });
     const json = await data.json();
     console.log(json);

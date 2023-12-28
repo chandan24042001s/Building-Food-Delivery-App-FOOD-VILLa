@@ -35918,7 +35918,8 @@ const Body = ()=>{
     }, []);
     const getRestraunt = async ()=>{
         const data = await fetch((0, _constant.HOME_PAGE_URL), {
-            mode: "no-cors"
+            mode: "no-cors",
+            method: "GET"
         });
         const json = await data.json();
         console.log(json);
@@ -35938,12 +35939,12 @@ const Body = ()=>{
         children: " Offline hoo bhaiya"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 61,
+        lineNumber: 62,
         columnNumber: 12
     }, undefined);
     return filteredRestraunts && filteredRestraunts.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 65,
+        lineNumber: 66,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -35958,7 +35959,7 @@ const Body = ()=>{
                         onChange: handleSearch
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 69,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35966,13 +35967,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 76,
+                        lineNumber: 77,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 68,
+                lineNumber: 69,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35983,17 +35984,17 @@ const Body = ()=>{
                             ...restraunt.info
                         }, restraunt?.info?.id, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 83,
+                            lineNumber: 84,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 82,
+                        lineNumber: 83,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 80,
+                lineNumber: 81,
                 columnNumber: 7
             }, undefined)
         ]

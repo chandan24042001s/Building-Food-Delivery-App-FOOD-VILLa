@@ -69,7 +69,7 @@ const Body = () => {
         <input
           type="text"
           placeholder="Search here"
-          className="px-3"
+          className="h-10 w-[30rem] px-4 border border-gray-400  text-Secondry text-base outline-none rounded-l"
           value={searchTXT}
           onChange={handleSearch}
         ></input>

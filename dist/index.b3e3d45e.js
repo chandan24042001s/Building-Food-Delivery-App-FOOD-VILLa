@@ -27365,7 +27365,6 @@ const Header = ()=>{
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex justify-between items-center h-20  font-bold",
-        id: "shadow",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
@@ -35954,7 +35953,7 @@ const Body = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
                         placeholder: "Search here",
-                        className: "px-3",
+                        className: "h-10 w-[30rem] px-4 border border-gray-400  text-Secondry text-base outline-none rounded-l",
                         value: searchTXT,
                         onChange: handleSearch
                     }, void 0, false, {

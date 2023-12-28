@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <div
       className="flex justify-between items-center h-20  font-bold"
-      id="shadow"
+      // id="shadow"
     >
       <Title/>
 

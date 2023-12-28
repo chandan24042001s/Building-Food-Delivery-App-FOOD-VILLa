@@ -31,13 +31,13 @@ const Body = () => {
     console.log(json);
 
     setRestraunts(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setAllRestraunts(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestraunts(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
 
@@ -61,7 +61,7 @@ const Body = () => {
     return <h1> Offline hoo bhaiya</h1>;
   }
 
-  return filteredRestraunts.length === 0 ? (
+  return (filteredRestraunts && filteredRestraunts.length === 0) ? (
     <Shimmer />
   ) : (
     <>
@@ -78,7 +78,7 @@ const Body = () => {
         </button>
       </div>
       <div className="flex flex-wrap justify-center">
-        {filteredRestraunts.map((restraunt, index) => (
+        {filteredRestraunts && filteredRestraunts.map((restraunt, index) => (
           <Link to={"/restaurant/" + restraunt?.info?.id}>
             <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />
           </Link>

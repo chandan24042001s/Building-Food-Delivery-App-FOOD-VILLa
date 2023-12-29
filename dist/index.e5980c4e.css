@@ -508,14 +508,6 @@ img, video {
   width: 800px;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
-.w-48 {
-  width: 12rem;
-}
-
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -728,11 +720,6 @@ img, video {
 .px-14 {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
-}
-
-.px-3 {
-  padding-left: .75rem;
-  padding-right: .75rem;
 }
 
 .px-4 {

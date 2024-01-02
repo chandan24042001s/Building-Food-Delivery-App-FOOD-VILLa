@@ -37661,7 +37661,7 @@ const MenuCard = (props)=>{
     const removeItemClick = (item)=>{
         if (itemCount === 0) return;
         setItemCount(itemCount - 1);
-        dispatch(removeItem(item));
+        dispatch((0, _cartSlice.removeItem)(item));
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "menu-card",
@@ -37673,7 +37673,7 @@ const MenuCard = (props)=>{
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/MenuCard.js",
-                        lineNumber: 37,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -37683,20 +37683,20 @@ const MenuCard = (props)=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/MenuCard.js",
-                        lineNumber: 38,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: description
                     }, void 0, false, {
                         fileName: "src/components/MenuCard.js",
-                        lineNumber: 39,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/MenuCard.js",
-                lineNumber: 36,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -37707,7 +37707,7 @@ const MenuCard = (props)=>{
                         alt: ""
                     }, void 0, false, {
                         fileName: "src/components/MenuCard.js",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -37717,7 +37717,7 @@ const MenuCard = (props)=>{
                                 children: "-"
                             }, void 0, false, {
                                 fileName: "src/components/MenuCard.js",
-                                lineNumber: 45,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, undefined),
                             itemCount === 0 ? "ADD" : itemCount,
@@ -37726,25 +37726,25 @@ const MenuCard = (props)=>{
                                 children: "+"
                             }, void 0, false, {
                                 fileName: "src/components/MenuCard.js",
-                                lineNumber: 47,
+                                lineNumber: 48,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/MenuCard.js",
-                        lineNumber: 44,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/MenuCard.js",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/MenuCard.js",
-        lineNumber: 35,
+        lineNumber: 36,
         columnNumber: 5
     }, undefined);
 };
@@ -37767,6 +37767,8 @@ $RefreshReg$(_c, "MenuCard");
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addItem", ()=>addItem);
+parcelHelpers.export(exports, "removeItem", ()=>removeItem);
+parcelHelpers.export(exports, "clearCart", ()=>clearCart);
 var _toolkit = require("@reduxjs/toolkit");
 const cartSlice = (0, _toolkit.createSlice)({
     name: "cart",
@@ -37775,11 +37777,19 @@ const cartSlice = (0, _toolkit.createSlice)({
     },
     reducers: {
         addItem: (state, action)=>{
+            //Mutating our state here
             state.items.push(action.payload);
+        },
+        removeItem: (state, actions)=>{
+            //Removes the element with the index of actions.payload
+            state.items.splice(state.items.indexOf(actions.payload), 1);
+        },
+        clearCart: (state, actions)=>{
+            state.items.length = 0;
         }
     }
 });
-const { addItem } = cartSlice.actions;
+const { addItem, removeItem, clearCart } = cartSlice.actions;
 exports.default = cartSlice.reducer; /**
  * Observations
  * 
@@ -41744,57 +41754,97 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRedux = require("react-redux");
-var _store = require("../utils/store");
-var _storeDefault = parcelHelpers.interopDefault(_store);
-var _foodItem = require("./FoodItem");
-var _foodItemDefault = parcelHelpers.interopDefault(_foodItem);
+var _menuCard = require("./MenuCard");
+var _menuCardDefault = parcelHelpers.interopDefault(_menuCard);
+var _cartSlice = require("./../utils/cartSlice");
 var _s = $RefreshSig$();
 const Cart = ()=>{
     _s();
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
+    const disptach = (0, _reactRedux.useDispatch)();
+    const handleClearCart = ()=>{
+        disptach((0, _cartSlice.clearCart)());
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "cart",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "cart-top",
                 children: [
-                    " Cart-Items-",
-                    cartItems.length
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: cartItems.length === 0 ? "Empty Cart" : "Cart"
+                    }, void 0, false, {
+                        fileName: "src/components/Cart.js",
+                        lineNumber: 20,
+                        columnNumber: 9
+                    }, undefined),
+                    cartItems.length > 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: handleClearCart,
+                        children: [
+                            "Clear Cart ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                id: "trash-bin",
+                                class: "ri-delete-bin-line"
+                            }, void 0, false, {
+                                fileName: "src/components/Cart.js",
+                                lineNumber: 23,
+                                columnNumber: 24
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Cart.js",
+                        lineNumber: 22,
+                        columnNumber: 11
+                    }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Cart.js",
-                lineNumber: 10,
-                columnNumber: 9
+                lineNumber: 19,
+                columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap",
-                children: cartItems.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _foodItemDefault.default), {
-                        ...item
-                    }, void 0, false, {
-                        fileName: "src/components/Cart.js",
-                        lineNumber: 14,
-                        columnNumber: 17
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "src/components/Cart.js",
-                lineNumber: 12,
-                columnNumber: 9
-            }, undefined)
+            cartItems?.map((item)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuCardDefault.default), {
+                    dishData: item
+                }, item?.card?.info?.id, false, {
+                    fileName: "src/components/Cart.js",
+                    lineNumber: 29,
+                    columnNumber: 16
+                }, undefined);
+            })
         ]
     }, void 0, true, {
         fileName: "src/components/Cart.js",
-        lineNumber: 9,
+        lineNumber: 18,
         columnNumber: 5
     }, undefined);
 };
-_s(Cart, "sOGYiwJY+kD+ABxufRt7JbvggIE=", false, function() {
+_s(Cart, "Fy9wE5TBz/TKD0sJ0A7yC5R5m4I=", false, function() {
     return [
-        (0, _reactRedux.useSelector)
+        (0, _reactRedux.useSelector),
+        (0, _reactRedux.useDispatch)
     ];
 });
 _c = Cart;
-exports.default = Cart;
+exports.default = Cart; // import React from 'react';
+ // import { useSelector } from 'react-redux';
+ // import store from '../utils/store';
+ // import FoodItem from './FoodItem';
+ // const Cart = () => {
+ //     const cartItems=useSelector((store)=>store.cart.items);
+ //   return (
+ //     <div>
+ //         <h1> Cart-Items-{cartItems.length}</h1>
+ //         {/* //<FoodItem {...cartItems[0]}/> */}
+ //         <div className='flex flex-wrap'>
+ //             {cartItems.map((item)=>(
+ //                 <FoodItem {...item}/>
+ //             ))}
+ //         </div>
+ //     </div>
+ //   )
+ // }
+ // export default Cart
 var _c;
 $RefreshReg$(_c, "Cart");
 
@@ -41803,88 +41853,7 @@ $RefreshReg$(_c, "Cart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","../utils/store":"k2jPV","./FoodItem":"9xltm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xltm":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8f2a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8f2a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _constant = require("../../constant");
-const FoodItem = (items)=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "w-56 p-2 m-2 shadow-lg bg-pink-50",
-            children: [
-                console.log(items),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: (0, _constant.swiggyIMageCDN) + items?.card?.info?.imageId
-                }, void 0, false, {
-                    fileName: "src/components/FoodItem.js",
-                    lineNumber: 9,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: " font-bold text-2xl ",
-                    children: [
-                        items?.card?.info?.name,
-                        " "
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/FoodItem.js",
-                    lineNumber: 11,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                    children: [
-                        " ",
-                        items?.card?.info?.description,
-                        " "
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/FoodItem.js",
-                    lineNumber: 12,
-                    columnNumber: 13
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                    className: "text-xl",
-                    children: [
-                        " Rupees : ",
-                        items?.card?.info?.price / 100
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/FoodItem.js",
-                    lineNumber: 13,
-                    columnNumber: 13
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/FoodItem.js",
-            lineNumber: 7,
-            columnNumber: 9
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/FoodItem.js",
-        lineNumber: 6,
-        columnNumber: 5
-    }, undefined);
-};
-_c = FoodItem;
-exports.default = FoodItem;
-var _c;
-$RefreshReg$(_c, "FoodItem");
-
-  $parcel$ReactRefreshHelpers$8f2a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../constant":"hVDs4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jqPPz":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-redux":"bdVon","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./MenuCard":"3OOKb","./../utils/cartSlice":"5RXlr"}],"jqPPz":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

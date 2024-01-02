@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 
 import { useState } from "react";
 import { swiggyIMageCDN } from "../../constant";
-import { addItem } from "../utils/cartSlice";
+import  { addItem, clearCart, removeItem } from "../utils/cartSlice";
 addItem
 const MenuCard = (props) => {
   const { dishData } = props;
@@ -21,6 +21,7 @@ const MenuCard = (props) => {
     setItemCount(itemCount + 1);
     dispatch(addItem(item));
   };
+
 
   const removeItemClick = (item) => {
     if (itemCount === 0) {

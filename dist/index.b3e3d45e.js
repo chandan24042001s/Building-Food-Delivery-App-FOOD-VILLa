@@ -37289,115 +37289,199 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _constant = require("../../constant");
-var _useRestaurant = require("../utils/useRestaurant");
-var _useRestaurantDefault = parcelHelpers.interopDefault(_useRestaurant);
+// import useRestaurant from "../utils/useRestaurant";
 var _shimmer = require("./Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _cartSlice = require("../utils/cartSlice");
+// import { CDN_URL } from "../utils/constants";
+// import { addItem } from "../utils/cartSlice";
 var _reactRedux = require("react-redux");
+var _useRestaurantMenu = require("../utils/useRestaurantMenu");
+var _useRestaurantMenuDefault = parcelHelpers.interopDefault(_useRestaurantMenu);
+var _restaurantCategory = require("./RestaurantCategory");
+var _restaurantCategoryDefault = parcelHelpers.interopDefault(_restaurantCategory);
 var _s = $RefreshSig$();
 const RestaurantMenu = ()=>{
     _s();
+    const [veg, setVeg] = (0, _react.useState)(false);
+    const [vegStyle, setVegStyle] = (0, _react.useState)({
+        left: "5%",
+        backgroundColor: "#fff"
+    });
     const { id } = (0, _reactRouterDom.useParams)();
+    const [showIndex, setShowIndex] = (0, _react.useState)(null);
+    const resInfo = (0, _useRestaurantMenuDefault.default)(id);
+    const dummy = "Dummy Data";
     const [cardItems, setCardItems] = (0, _react.useState)({});
     const dispatch = (0, _reactRedux.useDispatch)();
-    const addFoodItem = (items)=>{
-        dispatch((0, _cartSlice.addItem)(items));
-    };
-    const restaurant = (0, _useRestaurantDefault.default)();
-    console.log(restaurant);
-    //const basicInfo = restaurant?.cards[0]?.card?.card?.info;
-    //const itemCards = cardItems?.cards[2].groupedCard.cardGroupMap.REGULAR.cards;
+    if (resInfo === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/RestaurantMenu.js",
+        lineNumber: 30,
+        columnNumber: 12
+    }, undefined);
+    const { name, cuisines, locality, cloudinaryImageId } = resInfo?.cards[0]?.card?.card?.info;
+    const categoryFiltered = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "menu",
+        id: "menu",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: [
-                    " Restaurant Id: ",
-                    id,
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 29,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            restaurant && restaurant.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-                fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 33,
-                columnNumber: 45
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "MENU"
-            }, void 0, false, {
-                fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 34,
-                columnNumber: 5
-            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-center",
+                id: "menu-top",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: [
-                            " ",
-                            " "
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 36,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        className: "",
-                        children: restaurant[5]?.card?.card?.itemCards.map((items, index)=>// (() => { console.log(items); })()
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                children: [
-                                    " ",
-                                    items && items?.card?.info?.name,
-                                    "  ---",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                        className: "p-2 m-5 bg-green-200",
-                                        onClick: ()=>addFoodItem(items),
-                                        children: " + Add to Cart"
-                                    }, void 0, false, {
-                                        fileName: "src/components/RestaurantMenu.js",
-                                        lineNumber: 45,
-                                        columnNumber: 22
-                                    }, undefined)
-                                ]
-                            }, items.id, true, {
-                                fileName: "src/components/RestaurantMenu.js",
-                                lineNumber: 42,
-                                columnNumber: 17
-                            }, undefined))
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _constant.swiggyIMageCDN) + cloudinaryImageId,
+                        alt: ""
                     }, void 0, false, {
                         fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 37,
-                        columnNumber: 9
+                        lineNumber: 46,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 47,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: cuisines?.join(", ")
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 48,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: locality
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 49,
+                        columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 35,
-                columnNumber: 7
+                lineNumber: 45,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "menu-bottom",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "veg-only-button",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                id: "slider",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    onClick: ()=>{
+                                        if (veg == false) {
+                                            setVeg(true);
+                                            setVegStyle({
+                                                right: "5%",
+                                                backgroundColor: "green"
+                                            });
+                                        } else {
+                                            setVeg(false);
+                                            setVegStyle({
+                                                left: "5%",
+                                                backgroundColor: "#fff"
+                                            });
+                                        }
+                                    },
+                                    id: "circle",
+                                    style: vegStyle
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantMenu.js",
+                                    lineNumber: 55,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 54,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                children: "Veg Only"
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 75,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 53,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                        id: "accordian",
+                        children: categoryFiltered?.map((c, index)=>{
+                            return(// Controlled Component
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                                vegOption: veg,
+                                resData: c?.card?.card,
+                                showItems: index === showIndex && true,
+                                setMyIndex: ()=>{
+                                    index === showIndex ? setShowIndex(null) : setShowIndex(index);
+                                }
+                            }, c?.card?.card?.title, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 82,
+                                columnNumber: 17
+                            }, undefined));
+                        })
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 78,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantMenu.js",
+                lineNumber: 52,
+                columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantMenu.js",
-        lineNumber: 28,
-        columnNumber: 5
+        lineNumber: 44,
+        columnNumber: 7
     }, undefined);
+// const addFoodItem=(items)=>{
+//   dispatch(addItem(items));
+// }
+// const restaurant=useRestaurant();
+// console.log(restaurant)
+//const basicInfo = restaurant?.cards[0]?.card?.card?.info;
+//const itemCards = cardItems?.cards[2].groupedCard.cardGroupMap.REGULAR.cards;
+// return (
+//   <div className="menu">
+//       <h1> Restaurant Id: {id} </h1>
+//     <div>
+//       </div>
+//   {restaurant && restaurant.length===0 && <Shimmer/>}
+//   <h1>MENU</h1>
+//     <div className="flex justify-center">
+//       <div> { " "}</div>
+//       <ul className="">
+//     {
+//         (restaurant[5]?.card?.card?.itemCards).map(
+//           (items,index)=>(
+//            // (() => { console.log(items); })()
+//               <li key={items.id}
+//               > { items && items?.card?.info?.name}  --- 
+//                    <button className="p-2 m-5 bg-green-200" onClick={()=>addFoodItem(items)} > + Add to Cart</button>    
+//                </li>
+//             )
+//            ) 
+//       }
+//       </ul>
+//     </div>
+//   </div>
+// );
 };
-_s(RestaurantMenu, "vfuso7gU9K5wREdz2V3ZOs50ULc=", false, function() {
+_s(RestaurantMenu, "mftQHYVMYZxiue+wJPWgJ1VCXGw=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
-        (0, _reactRedux.useDispatch),
-        (0, _useRestaurantDefault.default)
+        (0, _useRestaurantMenuDefault.default),
+        (0, _reactRedux.useDispatch)
     ];
 });
 _c = RestaurantMenu;
@@ -37410,45 +37494,257 @@ $RefreshReg$(_c, "RestaurantMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../constant":"hVDs4","../utils/useRestaurant":"ewgpj","./Shimmer":"g6ZGj","../utils/cartSlice":"5RXlr","react-redux":"bdVon","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ewgpj":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5009 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../../constant":"hVDs4","./Shimmer":"g6ZGj","react-redux":"bdVon","../utils/useRestaurantMenu":"fMOkH","./RestaurantCategory":"K7XHe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fMOkH":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$253c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5009.prelude(module);
+$parcel$ReactRefreshHelpers$253c.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _s = $RefreshSig$();
-const useRestaurant = ()=>{
+const useRestaurantMenu = (resId)=>{
     _s();
-    const [restaurant, setRestaurant] = (0, _react.useState)({});
-    const [restaurantBasic, setRestaurantBasic] = (0, _react.useState)({});
+    const [resInfo, setResInfo] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
-        getRestaurantInfo();
+        fetchData();
     }, []);
-    //const itemCards = restaurant?.cards[2].groupedCard.cardGroupMap.REGULAR.cards;
-    async function getRestaurantInfo() {
-        const data = await fetch("https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.4594965&lng=77.0266383&restaurantId=125878&isMenuUx4=true&submitAction=ENTER");
+    const fetchData = async ()=>{
+        const data = await fetch(`/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5987633&lng=77.0786143&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
         const json = await data.json();
-        //console.log(json.data.cards[0]?.card?.card?.info);
-        console.log(json.data);
-    //setRestaurant(json.data.cards[0]?.card?.card?.info);
-    // setRestaurant(json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-    }
-    console.log(restaurant);
-    return restaurant;
+        setResInfo(json?.data);
+    };
+    return resInfo;
 };
-_s(useRestaurant, "juk56BvDTDOXd4mcWtfrK3H18x0=");
-exports.default = useRestaurant;
+_s(useRestaurantMenu, "hwGjLfSdFvMgUl5xpwSM0SJv98A=");
+exports.default = useRestaurantMenu;
 
-  $parcel$ReactRefreshHelpers$5009.postlude(module);
+  $parcel$ReactRefreshHelpers$253c.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5RXlr":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"K7XHe":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b1f7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b1f7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _menuCard = require("./MenuCard");
+var _menuCardDefault = parcelHelpers.interopDefault(_menuCard);
+const RestaurantCategory = (props)=>{
+    const { vegOption, resData, showItems, setMyIndex } = props;
+    const { title, itemCards } = resData;
+    const filteredVegItems = itemCards?.filter((dish)=>{
+        if (vegOption == true) return dish?.card?.info?.itemAttribute.vegClassifier === "VEG";
+        else return dish;
+    });
+    if (filteredVegItems.length === 0) return;
+    const handleClick = ()=>{
+        setMyIndex();
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                htmlFor: title,
+                onClick: handleClick,
+                children: [
+                    title,
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                            className: "ri-arrow-down-s-line"
+                        }, void 0, false, {
+                            fileName: "src/components/RestaurantCategory.js",
+                            lineNumber: 29,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/RestaurantCategory.js",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantCategory.js",
+                lineNumber: 26,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "content",
+                children: showItems && filteredVegItems?.map((dish)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuCardDefault.default), {
+                        dishData: dish
+                    }, dish?.card?.info?.id, false, {
+                        fileName: "src/components/RestaurantCategory.js",
+                        lineNumber: 35,
+                        columnNumber: 20
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCategory.js",
+                lineNumber: 32,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantCategory.js",
+        lineNumber: 25,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurantCategory;
+exports.default = RestaurantCategory;
+var _c;
+$RefreshReg$(_c, "RestaurantCategory");
+
+  $parcel$ReactRefreshHelpers$b1f7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./MenuCard":"3OOKb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3OOKb":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$659a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$659a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _userJpeg = require("../Images/user.jpeg");
+var _userJpegDefault = parcelHelpers.interopDefault(_userJpeg);
+var _reactRedux = require("react-redux");
+var _react = require("react");
+var _constant = require("../../constant");
+var _cartSlice = require("../utils/cartSlice");
+var _s = $RefreshSig$();
+0, _cartSlice.addItem;
+const MenuCard = (props)=>{
+    _s();
+    const { dishData } = props;
+    const { name, price, description, imageId, defaultPrice } = dishData?.card?.info;
+    const [itemCount, setItemCount] = (0, _react.useState)(0);
+    const imageSource = imageId === undefined ? (0, _userJpegDefault.default) : (0, _constant.swiggyIMageCDN) + imageId;
+    const dispatch = (0, _reactRedux.useDispatch)();
+    const handleClick = (item)=>{
+        // Dispatch an action
+        setItemCount(itemCount + 1);
+        dispatch((0, _cartSlice.addItem)(item));
+    };
+    const removeItemClick = (item)=>{
+        if (itemCount === 0) return;
+        setItemCount(itemCount - 1);
+        dispatch(removeItem(item));
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "menu-card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "menu-card-left",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/components/MenuCard.js",
+                        lineNumber: 37,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        children: [
+                            "\u20B9",
+                            price / 100 || defaultPrice / 100
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MenuCard.js",
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: description
+                    }, void 0, false, {
+                        fileName: "src/components/MenuCard.js",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MenuCard.js",
+                lineNumber: 36,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "menu-card-right",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: imageSource,
+                        alt: ""
+                    }, void 0, false, {
+                        fileName: "src/components/MenuCard.js",
+                        lineNumber: 43,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>removeItemClick(dishData),
+                                children: "-"
+                            }, void 0, false, {
+                                fileName: "src/components/MenuCard.js",
+                                lineNumber: 45,
+                                columnNumber: 11
+                            }, undefined),
+                            itemCount === 0 ? "ADD" : itemCount,
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: ()=>handleClick(dishData),
+                                children: "+"
+                            }, void 0, false, {
+                                fileName: "src/components/MenuCard.js",
+                                lineNumber: 47,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MenuCard.js",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MenuCard.js",
+                lineNumber: 42,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/MenuCard.js",
+        lineNumber: 35,
+        columnNumber: 5
+    }, undefined);
+};
+_s(MenuCard, "tLlpyoZdcVpEElsAiQfQf5QoH04=", false, function() {
+    return [
+        (0, _reactRedux.useDispatch)
+    ];
+});
+_c = MenuCard;
+exports.default = MenuCard;
+var _c;
+$RefreshReg$(_c, "MenuCard");
+
+  $parcel$ReactRefreshHelpers$659a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../Images/user.jpeg":"6OX9e","react-redux":"bdVon","react":"21dqq","../../constant":"hVDs4","../utils/cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5RXlr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addItem", ()=>addItem);

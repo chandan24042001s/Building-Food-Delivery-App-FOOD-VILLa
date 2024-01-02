@@ -70,8 +70,11 @@ const data = await fetch(HOME_PAGE_URL, {
   return (filteredRestraunts && filteredRestraunts.length === 0) ? (
     <Shimmer />
   ) : (
-    <>
-      <div className="flex justify-center p-8">
+    <div id="body" >
+       <h2>FoodieVilla</h2>
+      <h1>Discover the best food & drinks in Delhi NCR</h1>
+      <div  className="flex justify-center p-8">
+     
         <input
           type="text"
           placeholder="Search here"
@@ -90,7 +93,7 @@ const data = await fetch(HOME_PAGE_URL, {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

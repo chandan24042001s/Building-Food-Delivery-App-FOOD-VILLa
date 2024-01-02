@@ -35951,8 +35951,23 @@ const Body = ()=>{
         fileName: "src/components/Body.js",
         lineNumber: 71,
         columnNumber: 5
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "body",
         children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "FoodieVilla"
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 74,
+                columnNumber: 8
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Discover the best food & drinks in Delhi NCR"
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 75,
+                columnNumber: 7
+            }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex justify-center p-8",
                 children: [
@@ -35964,7 +35979,7 @@ const Body = ()=>{
                         onChange: handleSearch
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 75,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35972,13 +35987,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 82,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 74,
+                lineNumber: 76,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35989,21 +36004,25 @@ const Body = ()=>{
                             ...restraunt.info
                         }, restraunt?.info?.id, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 89,
+                            lineNumber: 92,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 88,
+                        lineNumber: 91,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 86,
+                lineNumber: 89,
                 columnNumber: 7
             }, undefined)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 73,
+        columnNumber: 5
+    }, undefined);
 };
 _s(Body, "WGWVUzZIbej24GnO3+Qs/+XPKVA=", false, function() {
     return [

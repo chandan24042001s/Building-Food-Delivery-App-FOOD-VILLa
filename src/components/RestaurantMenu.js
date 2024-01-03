@@ -8,6 +8,7 @@ import Shimmer from "./Shimmer";
 import { useDispatch } from "react-redux";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
+import ShimmerRes from "./ShimmerRes";
 
 const RestaurantMenu = () => {
   const [veg, setVeg] = useState(false);
@@ -27,7 +28,7 @@ const RestaurantMenu = () => {
   const dispatch=useDispatch();
 
   if (resInfo === null) {
-    return <Shimmer />;
+    return <ShimmerRes />;
   }
 
   const { name, cuisines, locality, cloudinaryImageId } =

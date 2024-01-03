@@ -71,7 +71,7 @@ const data = await fetch(HOME_PAGE_URL, {
     <Shimmer />
   ) : (
     <div id="body" >
-       <h2>FoodieVilla</h2>
+       <h2>FoodVilla</h2>
       <h1>Discover the best food & drinks in Delhi NCR</h1>
       <div  className="flex justify-center p-8">
      

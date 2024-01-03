@@ -1,25 +1,24 @@
-import React from "react";
+import LoginImage from "./../../assets/login-image.png";
 
 const Login = () => {
   return (
-    <div className="flex justify-center ">
-      <div className="bg-DarkOrange h-[320] w-[380] mt-16 flex flex-col gap-5 justify-center items-center rounded-lg">
-        <h1 className="text-5xl text-Blue">Login</h1>
-        <input
-          type="text"
-          placeholder="Enter your email"
-          className="p-4 h-[50px] w-[300px] rounded-md"
-          id="shadow1"
-        ></input>
-        <input
-          type="password"
-          placeholder="Enter your password"
-          className="p-4 h-[50px] w-[300px] rounded-md"
-          id="shadow"
-        ></input>
-        <button className="bg-Blue w-[300px] h-[50px] rounded-md text-White">
-          Login
-        </button>
+    <div id="login">
+      <div id="login-left">
+        <img src={LoginImage} alt="" />
+      </div>
+      <div id="login-right">
+        <div id="login-box">
+          <h1>Login</h1>
+          <label>Email</label>
+          <br />
+          <input placeholder="username@gmail.com" type="email" />
+          <br />
+          <label>Password</label>
+          <br />
+          <input placeholder="Password" type="password" />
+          <br />
+          <button>Sign in</button>
+        </div>
       </div>
     </div>
   );

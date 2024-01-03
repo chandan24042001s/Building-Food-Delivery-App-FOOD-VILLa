@@ -5,7 +5,7 @@ import Body from "../components/Body";
 import About from "../components/About";
 import Error from "../components/Error";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+
 import {
   createBrowserRouter,
   Outlet,
@@ -23,6 +23,8 @@ import store from "./store";
 import Cart from "../components/Cart";
 import Search from "../components/Search";
 import Login from "../components/Login";
+import Footer from "../components/Footer";
+
 
 const Instamart = lazy(() => import("../components/InstaMart"));
 const Applayout = () => {
@@ -48,7 +50,7 @@ const Applayout = () => {
         <Header />
         {/* <Search/> */}
         <Outlet />
-        <Footer />
+        <Footer/>
       </info1.Provider>
     </Provider>
   );

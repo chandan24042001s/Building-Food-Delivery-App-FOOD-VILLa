@@ -25,26 +25,26 @@ const Header = () => {
 
   return (
     <div
-      className="flex justify-between items-center h-20  font-bold"
+      className="flex justify-between  h-20  font-bold"
       // id="shadow"
     >
       <Title/>
 
       <div className=" mr-3">
-        <ul className="flex gap-x-1 items-center">
+        <ul className="flex gap-x-2 text-[15px] pt-4 items-center">
           <Link to="/">
-            <li className="text-Primary hover:text-Secondry hover:bg-Orange  h-10 w-16 pt-2 text-center rounded-lg">
+            <li className="text-Primary hover:text-Orange font-bold h-4 w-16 pt-2 text-center rounded-lg">
               Home
             </li>
           </Link>
           <Link to="/about">
-            <li className="text-Primary hover:text-Secondry hover:bg-Orange h-10 w-16 pt-2 text-center rounded-lg">
+            <li className="text-Primary hover:text-Orange font-bold h-4 w-16 pt-2 text-center rounded-lg">
               About
             </li>
           </Link>
 
           <Link to="/contact">
-            <li className="text-Primary hover:text-Secondry hover:bg-Orange h-10 w-20 pt-2 text-center rounded-lg">
+            <li className="text-Primary hover:text-Orange font-bold h-4 w-20 pt-2 text-center rounded-lg">
               Contact
             </li>
           </Link>
@@ -52,16 +52,16 @@ const Header = () => {
             <li className="">Instamart</li>
           </Link> */}
           <Link to="/cart">
-            <li className="text-Primary hover:text-Secondry hover:bg-Orange  h-10 w-10 pt-2 text-center rounded-lg">
+            <span className="absolute right-20">{cartItems.length} </span>
+            <li className=" text-Primary hover:text-Orange font-bold  h-4 w-10  pt-2 text-center rounded-lg">
               <i class="fa-solid fa-cart-shopping"></i>
             </li>
-            {/* {cartItems.length}  */}
           </Link>
           <Link to="/login">
-            <li className="text-Primary hover:text-Secondry hover:bg-Orange h-10 w-16 pt-2 text-center rounded-lg relative pr-3">
+            <li className="text-Primary hover:text-Orange font-bold h-4 w-16 pt-2 text-center rounded-lg relative pr-3">
               login
               {isOnline ? (
-                <div className="h-3 w-3 rounded-full bg-LightGreen absolute right-1 top-4 "></div>
+                <div className="h-3 w-3 rounded-full bg-LightGreen absolute right-0 top-3 "></div>
               ) : (
                 <div className="h-3 w-3 rounded-full bg-gray-600 "></div>
               )}

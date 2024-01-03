@@ -78,11 +78,11 @@ const data = await fetch(HOME_PAGE_URL, {
         <input
           type="text"
           placeholder="Search here"
-          className="h-10 w-[30rem] px-4 border border-gray-400  text-Secondry text-base outline-none rounded-l"
+          className="h-16 w-[30rem] px-4 border border-gray-400 outline-none rounded-l"
           value={searchTXT}
           onChange={handleSearch}
         ></input>
-        <button className="p-2 w-24 bg-LightOrange hover:bg-Green text-Secondry text-base rounded-r">
+        <button className=" w-28 bg-LightOrange hover:bg-Green text-Secondry text-base rounded-r">
           Search
         </button>
       </div>

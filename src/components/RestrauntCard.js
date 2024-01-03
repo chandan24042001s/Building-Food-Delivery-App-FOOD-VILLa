@@ -6,7 +6,7 @@ const RestrauntCard = (props) => {
   const { user } = useContext(info1);
   return (
     <div>
-      <div id="shadow" className="w-[250px] h-[320px] m-4 p-3 rounded-xl">
+      <div id="shadow" className="w-[250px] h-[320px] m-6 p-3 rounded-xl">
         <img
           className="h-[160px] w-72 rounded-2xl"
           src={swiggyIMageCDN + props.cloudinaryImageId}

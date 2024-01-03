@@ -3,18 +3,32 @@ import React from "react";
 const Shimmer = () => {
   return (
     <>
-      <div className="flex justify-center p-8">
-        <input
-          type="text"
-          placeholder="Search  a restaurant you want..."
-          className="h-10 w-[30rem] px-4 border border-gray-400  text-Secondry text-base outline-none rounded-l"
-        ></input>
-        <button className="p-2 w-24 bg-LightOrange hover:bg-Green text-Secondry text-base rounded-r">
-          Search
-        </button>
+    <div className="flex flex-col items-center gap-10 mt-5 mb-10">
+      <div className="flex  px-3 py-3 mb-2 w-[350px] h-[120px] rounded-lg"
+        id="shadow"
+        >
+        <a className="relative w-[700px] h-[100px] block overflow-hidden mb-2">
+          <span id="loader-element"></span></a> 
+      </div>
+      <div className="flex  px-3 py-3 w-[720px] h-[70px]  rounded-lg"
+        id="shadow"
+      >
+        <a className="relative w-[700px] h-[50px] block overflow-hidden mb-2">
+          <span id="loader-element"></span></a> 
+      </div>
+      <div className="flex  gap-1 px-3 py-3 w-[35rem] mb-5 h-[70px]  rounded-lg"
+        id="shadow"
+      >
+        <a className="relative w-[30rem] h-[50px] block overflow-hidden mb-2">
+          <span id="loader-element"></span></a> 
+        <a className="relative w-28 h-[50px] block overflow-hidden mb-2">
+          <span id="loader-element"></span></a> 
+
       </div>
 
-      <div className=" flex gap-7 mt-4 flex-wrap justify-center">
+      </div>
+      
+      <div className=" flex gap-12 ml-10 mt-4 flex-wrap justify-center">
         {Array(30)
           .fill(" ")
           .map((e, index) => (

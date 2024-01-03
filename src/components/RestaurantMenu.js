@@ -18,7 +18,7 @@ const RestaurantMenu = () => {
   });
   const { id } = useParams();
   const [showIndex, setShowIndex] = useState(null);
-  const resInfo = useRestaurantMenu(id);
+   const resInfo = useRestaurantMenu(id);
 
   const dummy = "Dummy Data";
 
@@ -43,15 +43,15 @@ const RestaurantMenu = () => {
   
     return (
       <div id="menu">
+        <div className="flex">
         <div id="menu-top">
-          <img src={swiggyIMageCDN + cloudinaryImageId} alt="" />
+          <img className="rounded-lg" src={swiggyIMageCDN + cloudinaryImageId} alt="" />
           <h1>{name}</h1>
           <h3>{cuisines?.join(", ")}</h3>
           <h3>{locality}</h3>
         </div>
-  
-        <div id="menu-bottom">
-          <div id="veg-only-button">
+
+        <div id="veg-only-button" className="self-end">
             <div id="slider">
               <div
                 onClick={() => {
@@ -74,7 +74,10 @@ const RestaurantMenu = () => {
               ></div>
             </div>
             <h3>Veg Only</h3>
-          </div>
+        </div>
+      </div>
+  
+        <div id="menu-bottom">
   
           <ul id="accordian">
             {categoryFiltered?.map((c, index) => {

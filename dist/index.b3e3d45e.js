@@ -27364,7 +27364,7 @@ const Header = ()=>{
     const { user } = (0, _react.useContext)((0, _userContextDefault.default));
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-between items-center h-20  font-bold",
+        className: "flex justify-between  h-20  font-bold",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
@@ -27374,12 +27374,12 @@ const Header = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: " mr-3",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    className: "flex gap-x-1 items-center",
+                    className: "flex gap-x-2 text-[15px] pt-4 items-center",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: "text-Primary hover:text-Secondry hover:bg-Orange  h-10 w-16 pt-2 text-center rounded-lg",
+                                className: "text-Primary hover:text-Orange font-bold h-4 w-16 pt-2 text-center rounded-lg",
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
@@ -27394,7 +27394,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/about",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: "text-Primary hover:text-Secondry hover:bg-Orange h-10 w-16 pt-2 text-center rounded-lg",
+                                className: "text-Primary hover:text-Orange font-bold h-4 w-16 pt-2 text-center rounded-lg",
                                 children: "About"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
@@ -27409,7 +27409,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/contact",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: "text-Primary hover:text-Secondry hover:bg-Orange h-10 w-20 pt-2 text-center rounded-lg",
+                                className: "text-Primary hover:text-Orange font-bold h-4 w-20 pt-2 text-center rounded-lg",
                                 children: "Contact"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
@@ -27423,21 +27423,34 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/cart",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: "text-Primary hover:text-Secondry hover:bg-Orange  h-10 w-10 pt-2 text-center rounded-lg",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    class: "fa-solid fa-cart-shopping"
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "absolute right-20",
+                                    children: [
+                                        cartItems.length,
+                                        " "
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 55,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    className: " text-Primary hover:text-Orange font-bold  h-4 w-10  pt-2 text-center rounded-lg",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-solid fa-cart-shopping"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 57,
+                                        columnNumber: 15
+                                    }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
                                     lineNumber: 56,
-                                    columnNumber: 15
+                                    columnNumber: 13
                                 }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 55,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
+                            ]
+                        }, void 0, true, {
                             fileName: "src/components/Header.js",
                             lineNumber: 54,
                             columnNumber: 11
@@ -27445,11 +27458,11 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                             to: "/login",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: "text-Primary hover:text-Secondry hover:bg-Orange h-10 w-16 pt-2 text-center rounded-lg relative pr-3",
+                                className: "text-Primary hover:text-Orange font-bold h-4 w-16 pt-2 text-center rounded-lg relative pr-3",
                                 children: [
                                     "login",
                                     isOnline ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        className: "h-3 w-3 rounded-full bg-LightGreen absolute right-1 top-4 "
+                                        className: "h-3 w-3 rounded-full bg-LightGreen absolute right-0 top-3 "
                                     }, void 0, false, {
                                         fileName: "src/components/Header.js",
                                         lineNumber: 64,
@@ -35928,9 +35941,9 @@ const Body = ()=>{
         });
         const json = await data.json();
         console.log(json);
-        setRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setAllRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setRestraunts(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setAllRestraunts(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestraunts(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
     const handleSearch = (event)=>{
         const searchResult = event.target.value.toLowerCase();
@@ -35974,7 +35987,7 @@ const Body = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "text",
                         placeholder: "Search here",
-                        className: "h-10 w-[30rem] px-4 border border-gray-400  text-Secondry text-base outline-none rounded-l",
+                        className: "h-16 w-[30rem] px-4 border border-gray-400 outline-none rounded-l",
                         value: searchTXT,
                         onChange: handleSearch
                     }, void 0, false, {
@@ -35983,7 +35996,7 @@ const Body = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "p-2 w-24 bg-LightOrange hover:bg-Green text-Secondry text-base rounded-r",
+                        className: " w-28 bg-LightOrange hover:bg-Green text-Secondry text-base rounded-r",
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
@@ -36454,33 +36467,98 @@ const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-center p-8",
+                className: "flex flex-col items-center gap-10 mt-5 mb-10",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        placeholder: "Search  a restaurant you want...",
-                        className: "h-10 w-[30rem] px-4 border border-gray-400  text-Secondry text-base outline-none rounded-l"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex  px-3 py-3 mb-2 w-[350px] h-[120px] rounded-lg",
+                        id: "shadow",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            className: "relative w-[700px] h-[100px] block overflow-hidden mb-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                id: "loader-element"
+                            }, void 0, false, {
+                                fileName: "src/components/Shimmer.js",
+                                lineNumber: 11,
+                                columnNumber: 11
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Shimmer.js",
+                            lineNumber: 10,
+                            columnNumber: 9
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Shimmer.js",
                         lineNumber: 7,
-                        columnNumber: 9
+                        columnNumber: 7
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "p-2 w-24 bg-LightOrange hover:bg-Green text-Secondry text-base rounded-r",
-                        children: "Search"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex  px-3 py-3 w-[720px] h-[70px]  rounded-lg",
+                        id: "shadow",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            className: "relative w-[700px] h-[50px] block overflow-hidden mb-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                id: "loader-element"
+                            }, void 0, false, {
+                                fileName: "src/components/Shimmer.js",
+                                lineNumber: 17,
+                                columnNumber: 11
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Shimmer.js",
+                            lineNumber: 16,
+                            columnNumber: 9
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Shimmer.js",
-                        lineNumber: 12,
-                        columnNumber: 9
+                        lineNumber: 13,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex  gap-1 px-3 py-3 w-[35rem] mb-5 h-[70px]  rounded-lg",
+                        id: "shadow",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                className: "relative w-[30rem] h-[50px] block overflow-hidden mb-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    id: "loader-element"
+                                }, void 0, false, {
+                                    fileName: "src/components/Shimmer.js",
+                                    lineNumber: 23,
+                                    columnNumber: 11
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Shimmer.js",
+                                lineNumber: 22,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                className: "relative w-28 h-[50px] block overflow-hidden mb-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    id: "loader-element"
+                                }, void 0, false, {
+                                    fileName: "src/components/Shimmer.js",
+                                    lineNumber: 25,
+                                    columnNumber: 11
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Shimmer.js",
+                                lineNumber: 24,
+                                columnNumber: 9
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Shimmer.js",
+                        lineNumber: 19,
+                        columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Shimmer.js",
                 lineNumber: 6,
-                columnNumber: 7
+                columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: " flex gap-7 mt-4 flex-wrap justify-center",
+                className: " flex gap-12 ml-10 mt-4 flex-wrap justify-center",
                 children: Array(30).fill(" ").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             id: "shadow",
@@ -36492,12 +36570,12 @@ const Shimmer = ()=>{
                                         id: "loader-element"
                                     }, void 0, false, {
                                         fileName: "src/components/Shimmer.js",
-                                        lineNumber: 28,
+                                        lineNumber: 42,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Shimmer.js",
-                                    lineNumber: 27,
+                                    lineNumber: 41,
                                     columnNumber: 17
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36506,12 +36584,12 @@ const Shimmer = ()=>{
                                         id: "loader-element"
                                     }, void 0, false, {
                                         fileName: "src/components/Shimmer.js",
-                                        lineNumber: 31,
+                                        lineNumber: 45,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Shimmer.js",
-                                    lineNumber: 30,
+                                    lineNumber: 44,
                                     columnNumber: 17
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36520,12 +36598,12 @@ const Shimmer = ()=>{
                                         id: "loader-element"
                                     }, void 0, false, {
                                         fileName: "src/components/Shimmer.js",
-                                        lineNumber: 34,
+                                        lineNumber: 48,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Shimmer.js",
-                                    lineNumber: 33,
+                                    lineNumber: 47,
                                     columnNumber: 17
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36535,24 +36613,24 @@ const Shimmer = ()=>{
                                         id: "loader-element"
                                     }, void 0, false, {
                                         fileName: "src/components/Shimmer.js",
-                                        lineNumber: 37,
+                                        lineNumber: 51,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Shimmer.js",
-                                    lineNumber: 36,
+                                    lineNumber: 50,
                                     columnNumber: 17
                                 }, undefined)
                             ]
                         }, index, true, {
                             fileName: "src/components/Shimmer.js",
-                            lineNumber: 22,
+                            lineNumber: 36,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false))
             }, void 0, false, {
                 fileName: "src/components/Shimmer.js",
-                lineNumber: 17,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined)
         ]
@@ -36589,7 +36667,7 @@ const RestrauntCard = (props)=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             id: "shadow",
-            className: "w-[250px] h-[320px] m-4 p-3 rounded-xl",
+            className: "w-[250px] h-[320px] m-6 p-3 rounded-xl",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     className: "h-[160px] w-72 rounded-2xl",
@@ -37310,48 +37388,50 @@ const RestaurantMenu = ()=>{
         id: "menu",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "menu-top",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: (0, _constant.swiggyIMageCDN) + cloudinaryImageId,
-                        alt: ""
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 47,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: name
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 48,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        children: cuisines?.join(", ")
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 49,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        children: locality
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 50,
-                        columnNumber: 11
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 46,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "menu-bottom",
+                className: "flex",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "menu-top",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "rounded-lg",
+                                src: (0, _constant.swiggyIMageCDN) + cloudinaryImageId,
+                                alt: ""
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 48,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                children: name
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 49,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                children: cuisines?.join(", ")
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 50,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                children: locality
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantMenu.js",
+                                lineNumber: 51,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurantMenu.js",
+                        lineNumber: 47,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         id: "veg-only-button",
+                        className: "self-end",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 id: "slider",
@@ -37394,34 +37474,41 @@ const RestaurantMenu = ()=>{
                     }, void 0, true, {
                         fileName: "src/components/RestaurantMenu.js",
                         lineNumber: 54,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                        id: "accordian",
-                        children: categoryFiltered?.map((c, index)=>{
-                            return(// Controlled Component
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
-                                vegOption: veg,
-                                resData: c?.card?.card,
-                                showItems: index === showIndex && true,
-                                setMyIndex: ()=>{
-                                    index === showIndex ? setShowIndex(null) : setShowIndex(index);
-                                }
-                            }, c?.card?.card?.title, false, {
-                                fileName: "src/components/RestaurantMenu.js",
-                                lineNumber: 83,
-                                columnNumber: 17
-                            }, undefined));
-                        })
-                    }, void 0, false, {
-                        fileName: "src/components/RestaurantMenu.js",
-                        lineNumber: 79,
-                        columnNumber: 11
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantMenu.js",
-                lineNumber: 53,
+                lineNumber: 46,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "menu-bottom",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    id: "accordian",
+                    children: categoryFiltered?.map((c, index)=>{
+                        return(// Controlled Component
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                            vegOption: veg,
+                            resData: c?.card?.card,
+                            showItems: index === showIndex && true,
+                            setMyIndex: ()=>{
+                                index === showIndex ? setShowIndex(null) : setShowIndex(index);
+                            }
+                        }, c?.card?.card?.title, false, {
+                            fileName: "src/components/RestaurantMenu.js",
+                            lineNumber: 86,
+                            columnNumber: 17
+                        }, undefined));
+                    })
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantMenu.js",
+                    lineNumber: 82,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/RestaurantMenu.js",
+                lineNumber: 80,
                 columnNumber: 9
             }, undefined)
         ]
@@ -41716,17 +41803,45 @@ const ShimmerRes = ()=>{
                 id: "shimmer-res-top",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        id: "shimmer-res-image"
+                        id: "shimmer-res-image",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            className: "relative w-[45vw] h-[45vh] block overflow-hidden mb-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                id: "loader-element"
+                            }, void 0, false, {
+                                fileName: "src/components/ShimmerRes.js",
+                                lineNumber: 7,
+                                columnNumber: 11
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 6,
+                            columnNumber: 11
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/ShimmerRes.js",
                         lineNumber: 5,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        id: "shimmer-res-name"
+                        id: "shimmer-res-name",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            className: "relative h-[4vh] block overflow-hidden mb-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                id: "loader-element"
+                            }, void 0, false, {
+                                fileName: "src/components/ShimmerRes.js",
+                                lineNumber: 11,
+                                columnNumber: 11
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/ShimmerRes.js",
-                        lineNumber: 6,
+                        lineNumber: 9,
                         columnNumber: 11
                     }, undefined)
                 ]
@@ -41737,195 +41852,438 @@ const ShimmerRes = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "shimmer-res-bottom",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        id: "shimmer-res-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "shimmer-res-card-left",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-heading"
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    id: "shimmer-res-card",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "shimmer-res-card-left",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-heading",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[3vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 20,
+                                            columnNumber: 17
+                                        }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 12,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-text"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 13,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-para"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 14,
-                                        columnNumber: 15
+                                        lineNumber: 19,
+                                        columnNumber: 17
                                     }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/ShimmerRes.js",
-                                lineNumber: 11,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "shimmer-res-card-right"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerRes.js",
-                                lineNumber: 17,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerRes.js",
-                        lineNumber: 10,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        id: "shimmer-res-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "shimmer-res-card-left",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-heading"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 21,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-text"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 22,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-para"
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 18,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-text",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[3vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 24,
+                                            columnNumber: 17
+                                        }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/ShimmerRes.js",
                                         lineNumber: 23,
                                         columnNumber: 15
                                     }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/ShimmerRes.js",
-                                lineNumber: 20,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "shimmer-res-card-right"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerRes.js",
-                                lineNumber: 26,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerRes.js",
-                        lineNumber: 19,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        id: "shimmer-res-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "shimmer-res-card-left",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-heading"
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 22,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-para",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[2vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 28,
+                                            columnNumber: 17
+                                        }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 30,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-text"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 31,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-para"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 32,
+                                        lineNumber: 27,
                                         columnNumber: 15
                                     }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/ShimmerRes.js",
-                                lineNumber: 29,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "shimmer-res-card-right"
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 26,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 17,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "shimmer-res-card-right",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                className: "relative h-[20vh] block overflow-hidden mb-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    id: "loader-element"
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 34,
+                                    columnNumber: 17
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/ShimmerRes.js",
-                                lineNumber: 35,
+                                lineNumber: 33,
                                 columnNumber: 13
                             }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerRes.js",
-                        lineNumber: 28,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        id: "shimmer-res-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "shimmer-res-card-left",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-heading"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 39,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-text"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 40,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                        id: "shimmer-res-card-para"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ShimmerRes.js",
-                                        lineNumber: 41,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/ShimmerRes.js",
-                                lineNumber: 38,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "shimmer-res-card-right"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerRes.js",
-                                lineNumber: 44,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerRes.js",
-                        lineNumber: 37,
-                        columnNumber: 11
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                        }, void 0, false, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 32,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ShimmerRes.js",
+                    lineNumber: 16,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/components/ShimmerRes.js",
-                lineNumber: 9,
+                lineNumber: 15,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "shimmer-res-bottom",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    id: "shimmer-res-card",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "shimmer-res-card-left",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-heading",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[3vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 44,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 43,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 42,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-text",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[3vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 48,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 47,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 46,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-para",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[2vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 52,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 51,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 50,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 41,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "shimmer-res-card-right",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                className: "relative h-[20vh] block overflow-hidden mb-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    id: "loader-element"
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 58,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/ShimmerRes.js",
+                                lineNumber: 57,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 56,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ShimmerRes.js",
+                    lineNumber: 40,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/ShimmerRes.js",
+                lineNumber: 39,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "shimmer-res-bottom",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    id: "shimmer-res-card",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "shimmer-res-card-left",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-heading",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[3vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 68,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 67,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 66,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-text",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[3vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 72,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 71,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 70,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-para",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[2vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 76,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 75,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 74,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 65,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "shimmer-res-card-right",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                className: "relative h-[20vh] block overflow-hidden mb-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    id: "loader-element"
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 82,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/ShimmerRes.js",
+                                lineNumber: 81,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 80,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ShimmerRes.js",
+                    lineNumber: 64,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/ShimmerRes.js",
+                lineNumber: 63,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "shimmer-res-bottom",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    id: "shimmer-res-card",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "shimmer-res-card-left",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-heading",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[3vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 92,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 91,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 90,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-text",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[3vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 96,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 95,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 94,
+                                    columnNumber: 15
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    id: "shimmer-res-card-para",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                        className: "relative h-[2vh] block overflow-hidden mb-2",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            id: "loader-element"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ShimmerRes.js",
+                                            lineNumber: 100,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/ShimmerRes.js",
+                                        lineNumber: 99,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 98,
+                                    columnNumber: 15
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 89,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            id: "shimmer-res-card-right",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                className: "relative h-[20vh] block overflow-hidden mb-2",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    id: "loader-element"
+                                }, void 0, false, {
+                                    fileName: "src/components/ShimmerRes.js",
+                                    lineNumber: 106,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/ShimmerRes.js",
+                                lineNumber: 105,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/ShimmerRes.js",
+                            lineNumber: 104,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ShimmerRes.js",
+                    lineNumber: 88,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/ShimmerRes.js",
+                lineNumber: 87,
                 columnNumber: 9
             }, undefined)
         ]

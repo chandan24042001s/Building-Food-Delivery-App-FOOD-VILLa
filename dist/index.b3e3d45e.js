@@ -35941,9 +35941,20 @@ const Body = ()=>{
         });
         const json = await data.json();
         console.log(json);
-        setRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setAllRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // initialize checkJsonData() function to check Swiggy Restaurant data
+        async function checkJsonData(jsonData) {
+            for(let i = 0; i < jsonData?.data?.cards.length; i++){
+                // initialize checkData for Swiggy Restaurant data
+                let checkData = json?.data?.cards[i]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+                // if checkData is not undefined then return it
+                if (checkData !== undefined) return checkData;
+            }
+        }
+        // call the checkJsonData() function which return Swiggy Restaurant data
+        const resData = await checkJsonData(json);
+        setRestraunts(resData);
+        setAllRestraunts(resData);
+        setFilteredRestraunts(resData);
     };
     const handleSearch = (event)=>{
         const searchResult = event.target.value.toLowerCase();
@@ -35957,12 +35968,12 @@ const Body = ()=>{
         children: " Offline hoo bhaiya"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 67,
+        lineNumber: 82,
         columnNumber: 12
     }, undefined);
     return filteredRestraunts && filteredRestraunts.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 71,
+        lineNumber: 86,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "body",
@@ -35971,14 +35982,14 @@ const Body = ()=>{
                 children: "FoodVilla"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 74,
+                lineNumber: 89,
                 columnNumber: 8
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: "Discover the best food & drinks in Delhi NCR"
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 75,
+                lineNumber: 90,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35992,7 +36003,7 @@ const Body = ()=>{
                         onChange: handleSearch
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 78,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -36000,13 +36011,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 85,
+                        lineNumber: 100,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 76,
+                lineNumber: 91,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36017,23 +36028,23 @@ const Body = ()=>{
                             ...restraunt.info
                         }, restraunt?.info?.id, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 92,
+                            lineNumber: 107,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 91,
+                        lineNumber: 106,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 89,
+                lineNumber: 104,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 73,
+        lineNumber: 88,
         columnNumber: 5
     }, undefined);
 };

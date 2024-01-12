@@ -35,15 +35,30 @@ const data = await fetch(HOME_PAGE_URL, {
 });
     const json = await data.json();
     console.log(json);
+// initialize checkJsonData() function to check Swiggy Restaurant data
+async function checkJsonData(jsonData) {
+  for (let i = 0; i < jsonData?.data?.cards.length; i++) {
 
+    // initialize checkData for Swiggy Restaurant data
+    let checkData = json?.data?.cards[i]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+    // if checkData is not undefined then return it
+    if (checkData !== undefined) {
+      return checkData;
+    }
+  }
+}
+
+// call the checkJsonData() function which return Swiggy Restaurant data
+const resData = await checkJsonData(json);
     setRestraunts(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      resData
     );
     setAllRestraunts(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      resData
     );
     setFilteredRestraunts(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      resData
     );
   }
 

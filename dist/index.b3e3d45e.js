@@ -35941,9 +35941,9 @@ const Body = ()=>{
         });
         const json = await data.json();
         console.log(json);
-        setRestraunts(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setAllRestraunts(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestraunts(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setAllRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestraunts(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
     const handleSearch = (event)=>{
         const searchResult = event.target.value.toLowerCase();

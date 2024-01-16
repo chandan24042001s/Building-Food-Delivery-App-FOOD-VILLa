@@ -650,6 +650,10 @@ img, video {
   gap: 1.5rem;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-x-2 {
   column-gap: .5rem;
 }
@@ -753,6 +757,11 @@ img, video {
 .bg-Green {
   --tw-bg-opacity: 1;
   background-color: rgb(1 96 52 / var(--tw-bg-opacity));
+}
+
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {

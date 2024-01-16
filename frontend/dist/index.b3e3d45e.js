@@ -42375,7 +42375,7 @@ const Cart = ()=>{
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex ",
+                        className: "flex justify-between gap-4 ",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "ml-4",
@@ -42383,8 +42383,8 @@ const Cart = ()=>{
                                     to: "/order",
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                         onClick: handleClearCart,
-                                        className: "text-3xl h-14 px-5 py-2 bg-Green text-White rounded-lg hover:bg-red-700 hover:text-black",
-                                        children: "Checkout"
+                                        className: "text-3xl h-14 px-5 py-2 bg-Green text-White rounded-lg hover:text-black hover:bg-red-700",
+                                        children: "Place Order"
                                     }, void 0, false, {
                                         fileName: "src/components/Cart.js",
                                         lineNumber: 25,

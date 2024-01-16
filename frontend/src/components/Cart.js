@@ -19,10 +19,10 @@ const Cart = () => {
     <div id="cart">
       <div id="cart-top" className="">
         <h1>{cartItems.length === 0 ? "Empty Cart" : "Cart"}</h1>
-      <div className="flex ">
+      <div className="flex justify-between gap-4 ">
         <div className="ml-4"> 
         { cartItems.length>0 && <Link to="/order">
-      <button onClick={handleClearCart} className="text-3xl h-14 px-5 py-2 bg-Green text-White rounded-lg hover:bg-red-700 hover:text-black">Checkout</button>
+      <button onClick={handleClearCart} className="text-3xl h-14 px-5 py-2 bg-Green text-White rounded-lg hover:text-black hover:bg-red-700">Place Order</button>
       </Link>}
         </div>
       {cartItems.length > 0 && (

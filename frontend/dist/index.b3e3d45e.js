@@ -42559,9 +42559,39 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
 var _loginImagePng = require("./../../assets/login-image.png");
 var _loginImagePngDefault = parcelHelpers.interopDefault(_loginImagePng);
+var _reactRedux = require("react-redux");
+var _react = require("react");
+var _s = $RefreshSig$();
 const Login = ()=>{
+    _s();
+    // const {isSuccess}=useSelector((state)=>state.auth)
+    // const {isLoggedIn}=useSelector((state)=>state.auth)
+    const dispatch = (0, _reactRedux.useDispatch)();
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const [email, setEmail] = (0, _react.useState)("");
+    const [password, setPassword] = (0, _react.useState)("");
+    const [error, setError] = (0, _react.useState)("");
+    const loginUser = async (e)=>{
+        e.preventDefault();
+        console.log(email, password);
+        if (!email || !password) setError("Please Enter Email");
+        if (password.length < 6) setError("password must be upto 6 characters");
+        if (!validateEmail(email)) setError("please enter a valid email");
+        const userData = {
+            email,
+            password
+        };
+    };
+    //  useEffect(()=>{
+    //   console.log(isSuccess)
+    //   if(isSuccess && isLoggedIn){
+    //      navigate("/")
+    //   }
+    //   dispatch(RESET_AUTH());
+    //  },[isLoggedIn,isSuccess,dispatch,navigate])
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "login",
         children: [
@@ -42572,101 +42602,117 @@ const Login = ()=>{
                     alt: ""
                 }, void 0, false, {
                     fileName: "src/components/Login.js",
-                    lineNumber: 7,
+                    lineNumber: 45,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Login.js",
-                lineNumber: 6,
+                lineNumber: 44,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "login-right",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                    onSubmit: loginUser,
                     id: "login-box",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             children: "Login"
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 11,
+                            lineNumber: 49,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                             children: "Email"
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 12,
+                            lineNumber: 50,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 13,
+                            lineNumber: 51,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            placeholder: "username@gmail.com",
-                            type: "email"
+                            value: email,
+                            onChange: (e)=>{
+                                setEmail(e.target.value);
+                            },
+                            type: "email",
+                            placeholder: " "
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 14,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 15,
+                            lineNumber: 60,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                             children: "Password"
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 16,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 17,
+                            lineNumber: 62,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            placeholder: "Password",
-                            type: "password"
+                            value: password,
+                            onChange: (e)=>{
+                                setPassword(e.target.value);
+                            },
+                            type: "password",
+                            placeholder: ""
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 18,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 19,
+                            lineNumber: 71,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            type: "submit",
                             children: "Sign in"
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 20,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Login.js",
-                    lineNumber: 10,
+                    lineNumber: 48,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Login.js",
-                lineNumber: 9,
+                lineNumber: 47,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Login.js",
-        lineNumber: 5,
+        lineNumber: 43,
         columnNumber: 5
     }, undefined);
 };
+_s(Login, "z3v89fBPytTQKQTa9NQGhBRUk+Y=", false, function() {
+    return [
+        (0, _reactRedux.useDispatch),
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
 _c = Login;
 exports.default = Login;
 var _c;
@@ -42677,7 +42723,7 @@ $RefreshReg$(_c, "Login");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./../../assets/login-image.png":"46EmR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"46EmR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./../../assets/login-image.png":"46EmR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","react-redux":"bdVon","react":"21dqq"}],"46EmR":[function(require,module,exports) {
 module.exports = require("d69430fa6f27a8cc").getBundleURL("kIKgZ") + "login-image.d75dd585.png" + "?" + Date.now();
 
 },{"d69430fa6f27a8cc":"lgJ39"}],"8pPOA":[function(require,module,exports) {

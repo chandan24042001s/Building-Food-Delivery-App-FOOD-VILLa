@@ -42574,24 +42574,40 @@ const Login = ()=>{
     const [email, setEmail] = (0, _react.useState)("");
     const [password, setPassword] = (0, _react.useState)("");
     const [error, setError] = (0, _react.useState)("");
+    const validateEmail = (email)=>{
+        return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    };
     const loginUser = async (e)=>{
         e.preventDefault();
         console.log(email, password);
-        if (!email || !password) setError("Please Enter Email");
+        if (!email || !password) setEmail("All field are required");
         if (password.length < 6) setError("password must be upto 6 characters");
         if (!validateEmail(email)) setError("please enter a valid email");
         const userData = {
             email,
             password
         };
+        try {
+            const response = await fetch("http://localhost:5000/api/users/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    password
+                })
+            });
+            if (!response.ok) throw new Error("Login failed");
+            const data = await response.json();
+            console.log("Login successful:", data);
+            navigate("/");
+        // Handle successful login (e.g., redirect to a dashboard, show a success message)
+        } catch (error) {
+            console.error("Login error:", error);
+        // Handle login error (e.g., show an error message)
+        }
     };
-    //  useEffect(()=>{
-    //   console.log(isSuccess)
-    //   if(isSuccess && isLoggedIn){
-    //      navigate("/")
-    //   }
-    //   dispatch(RESET_AUTH());
-    //  },[isLoggedIn,isSuccess,dispatch,navigate])
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "login",
         children: [
@@ -42602,12 +42618,12 @@ const Login = ()=>{
                     alt: ""
                 }, void 0, false, {
                     fileName: "src/components/Login.js",
-                    lineNumber: 45,
+                    lineNumber: 63,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Login.js",
-                lineNumber: 44,
+                lineNumber: 62,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42620,19 +42636,19 @@ const Login = ()=>{
                             children: "Login"
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 49,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                             children: "Email"
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 50,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 51,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -42644,24 +42660,24 @@ const Login = ()=>{
                             placeholder: " "
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 52,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 60,
+                            lineNumber: 78,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                             children: "Password"
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 61,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 62,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -42673,12 +42689,12 @@ const Login = ()=>{
                             placeholder: ""
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 63,
+                            lineNumber: 81,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 71,
+                            lineNumber: 89,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -42686,24 +42702,24 @@ const Login = ()=>{
                             children: "Sign in"
                         }, void 0, false, {
                             fileName: "src/components/Login.js",
-                            lineNumber: 72,
+                            lineNumber: 90,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Login.js",
-                    lineNumber: 48,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Login.js",
-                lineNumber: 47,
+                lineNumber: 65,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Login.js",
-        lineNumber: 43,
+        lineNumber: 61,
         columnNumber: 5
     }, undefined);
 };

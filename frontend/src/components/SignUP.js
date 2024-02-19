@@ -1,94 +1,110 @@
-import React, { useState } from 'react'
-
+import { Link, useNavigate } from "react-router-dom";
+import LoginImage from "./../../assets/login-image.png";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
-
-const SignUP = () => {
-
-    const [errorMsg, setErrorMsg] = useState();
-
-
-
-    const [isSignInForm, setIsSignInForm] = useState(false);
-  
-
-
-  
-    const toggleSignInform = () => {
-      setIsSignInForm(!isSignInForm);
-    };
-  
-    const handlebuttonclick = () => {
-      const message = checkValidateData(
-        email.current.value
-        // password.current.value
+const SignUp = () => {
+  // const {isSuccess}=useSelector((state)=>state.auth)
+  // const {isLoggedIn}=useSelector((state)=>state.auth)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [name,setName]=useState("");
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("")
+ 
+  const [error,setError]=useState("");
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
+  };
   
-      setErrorMsg(message);
-      console.log(email.current.value);
-      // console.log(password.current.value);
+  const registerUser=async(e)=>{
+    e.preventDefault();
+    console.log(email,password);
+    if(!email || !password){
+        setEmail("All field are required")
+    }
+    if(password.length<6){
+        setError("password must be upto 6 characters")
+    }
+    if(!validateEmail(email)){
+        setError("please enter a valid email")
+    }
   
-      if (message) return;
+    const userData={email,password}
+    try {
+      const response = await fetch('https://food-villa-chandan.onrender.com/api/users/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({name, email, password })
+      });
   
+      if (!response.ok) {
+        throw new Error('Login failed');
+      }
+  
+      const data = await response.json();
+      console.log('Login successful:', data);
+      navigate("/")
+      // Handle successful login (e.g., redirect to a dashboard, show a success message)
+    } catch (error) {
+      console.error('Login error:', error);
+      // Handle login error (e.g., show an error message)
+    }
+  }
+
   return (
-    <div>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
+    <div id="login">
+      <div id="login-left">
+        <img src={LoginImage} alt="" />
+      </div>
+      <div id="login-right">
+        <form onSubmit={registerUser} id="login-box">
+          <h1>Signup</h1>
+          <label>Name</label>
+          <br/>
+          <input placeholder=""
+          value={name}
+          onChange={(e)=>{
+            setName(e.target.value);
           }}
-        //   className=" absolute w-full md:w-4/12 p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-90"
-        >
-          <h1 className="font-bold text-2xl md:text-3xl py-4 text-center">
-            {" "}
-            {isSignInForm ? "Sign In" : "Sign Up"}{" "}
-          </h1>
-          {!isSignInForm && (
-            <input
-              type="text"
-              placeholder="Full Name"
-             
-              className="p-4 my-4 w-full bg-gray-700 rounded-lg"
-            />
-          )}
-
+          type="text"/>
+          <label>Email</label>
+          <br />
           <input
-            type="text"
-          
-            placeholder="Email Address"
-            className="p-4 my-4 w-full bg-gray-700 rounded-lg"
+            value={email}
+            onChange={(e)=>{
+              setEmail(e.target.value);
+            }}
+            type="email"
+            placeholder=" "
           />
-
+          <br />
+          <label>Password</label>
+          <br />
           <input
+            value={password}
+            onChange={(e)=>{
+              setPassword(e.target.value);
+            }}
             type="password"
-            
-            placeholder="Password"
-            className="p-4 my-4 w-full bg-gray-700 rounded-lg"
+            placeholder=""
           />
+          <br />
+          <button type="submit">Create an Account</button>
 
-          <p className="text-LightRed font-bold py-2 text-xl text-center">
-            {errorMsg}
-          </p>
-
-          <button
-            className="p-4 my-6 bg-LightRed w-full rounded-lg "
-            onClick={handlebuttonclick}
-          >
-            {isSignInForm ? "Sign In" : "Sign Up"}
-          </button>
-
-          <p
-            className="py-4 cursor-pointer text-center"
-            onClick={toggleSignInform}
-          >
-            {" "}
-            {isSignInForm
-              ? "New to Netflix ? Sign Up Now"
-              : " Already Registed? Sign In Now"}{" "}
-          </p>
+          <Link to={"/login"}>
+          <p className="pl-10 text-white text-xl mb-5">Already Registered ? SignIn Now </p></Link>
+          
         </form>
+      </div>
     </div>
-  )
-}
-}
+  );
+};
 
-export default SignUP
+export default SignUp;

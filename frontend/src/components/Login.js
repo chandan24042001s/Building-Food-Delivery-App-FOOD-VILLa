@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginImage from "./../../assets/login-image.png";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -88,6 +88,10 @@ const Login = () => {
           />
           <br />
           <button type="submit">Sign in</button>
+
+          <Link to={"/signup"}>
+          <p className="pl-10 text-white text-xl ">New User ? SignUp Now</p>
+          </Link>
         </form>
       </div>
     </div>

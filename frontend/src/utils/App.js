@@ -25,6 +25,7 @@ import Search from "../components/Search";
 import Login from "../components/Login";
 import Footer from "../components/Footer";
 import Order from "../components/Order";
+import SignUp from "../components/SignUP";
 
 
 const Instamart = lazy(() => import("../components/InstaMart"));
@@ -86,6 +87,10 @@ const AppRouter = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
       },
       {
         path: "/order",

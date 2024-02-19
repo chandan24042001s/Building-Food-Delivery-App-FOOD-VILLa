@@ -2977,6 +2977,8 @@ var _footer = require("../components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _order = require("../components/Order");
 var _orderDefault = parcelHelpers.interopDefault(_order);
+var _signUP = require("../components/SignUP");
+var _signUPDefault = parcelHelpers.interopDefault(_signUP);
 var _s = $RefreshSig$();
 const Instamart = /*#__PURE__*/ (0, _react.lazy)(()=>require("ac9355aad2416057"));
 _c = Instamart;
@@ -3001,28 +3003,28 @@ const Applayout = ()=>{
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 51,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 53,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 54,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/utils/App.js",
-            lineNumber: 45,
+            lineNumber: 46,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/utils/App.js",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 5
     }, undefined);
 };
@@ -3038,12 +3040,12 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Applayout, {}, void 0, false, {
             fileName: "src/utils/App.js",
-            lineNumber: 63,
+            lineNumber: 64,
             columnNumber: 14
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/utils/App.js",
-            lineNumber: 64,
+            lineNumber: 65,
             columnNumber: 19
         }, undefined),
         children: [
@@ -3051,7 +3053,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 68,
+                    lineNumber: 69,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3059,7 +3061,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 72,
+                    lineNumber: 73,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3067,7 +3069,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 76,
+                    lineNumber: 77,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3075,7 +3077,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurant/:id",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 80,
+                    lineNumber: 81,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3083,7 +3085,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 84,
+                    lineNumber: 85,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3091,7 +3093,15 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/login",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 88,
+                    lineNumber: 89,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/signup",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _signUPDefault.default), {}, void 0, false, {
+                    fileName: "src/utils/App.js",
+                    lineNumber: 93,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3099,7 +3109,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/order",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _orderDefault.default), {}, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 92,
+                    lineNumber: 97,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3109,12 +3119,12 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, void 0, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Instamart, {}, void 0, false, {
                         fileName: "src/utils/App.js",
-                        lineNumber: 99,
+                        lineNumber: 104,
                         columnNumber: 13
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/utils/App.js",
-                    lineNumber: 98,
+                    lineNumber: 103,
                     columnNumber: 11
                 }, undefined)
             }
@@ -3126,7 +3136,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: AppRouter
 }, void 0, false, {
     fileName: "src/utils/App.js",
-    lineNumber: 109,
+    lineNumber: 114,
     columnNumber: 13
 }, undefined));
 var _c, _c1;
@@ -3138,7 +3148,7 @@ $RefreshReg$(_c1, "Applayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","../components/Header":"hsJbF","../components/Body":"8yaV8","../components/About":"9R1Eu","../components/Error":"kvula","../components/Contact":"cgAOG","react-router-dom":"9xmpe","../components/RestaurantMenu":"8PuJ6","../components/Shimmer":"g6ZGj","./userContext":"eBA1b","react-redux":"bdVon","./store":"k2jPV","../components/Cart":"h8J3U","../components/Search":"jqPPz","../components/Login":"hsmcH","../components/Footer":"8pPOA","../components/Order":"eYTTz","ac9355aad2416057":"3Mvxx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","../components/Header":"hsJbF","../components/Body":"8yaV8","../components/About":"9R1Eu","../components/Error":"kvula","../components/Contact":"cgAOG","react-router-dom":"9xmpe","../components/RestaurantMenu":"8PuJ6","../components/Shimmer":"g6ZGj","./userContext":"eBA1b","react-redux":"bdVon","./store":"k2jPV","../components/Cart":"h8J3U","../components/Search":"jqPPz","../components/Login":"hsmcH","../components/Footer":"8pPOA","../components/Order":"eYTTz","ac9355aad2416057":"3Mvxx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/SignUP":"i6wR5"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -36023,7 +36033,7 @@ const Body = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex flex-wrap justify-center",
+                className: "flex flex-wrap justify-center ",
                 children: filteredRestraunts && filteredRestraunts.map((restraunt, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/restaurant/" + restraunt?.info?.id,
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restrauntCardDefault.default), {
@@ -36680,7 +36690,7 @@ const RestrauntCard = (props)=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             id: "shadow",
-            className: "w-[250px] h-[320px] m-6 p-3 rounded-xl",
+            className: "w-[250px] h-[320px] m-6 p-3 rounded-xl ",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     className: "h-[160px] w-72 rounded-2xl",
@@ -42696,6 +42706,21 @@ const Login = ()=>{
                             fileName: "src/components/Login.js",
                             lineNumber: 90,
                             columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/signup",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "pl-10 text-white text-xl ",
+                                children: "New User ? SignUp Now"
+                            }, void 0, false, {
+                                fileName: "src/components/Login.js",
+                                lineNumber: 93,
+                                columnNumber: 11
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Login.js",
+                            lineNumber: 92,
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
@@ -43289,6 +43314,237 @@ module.exports = function(loader, type) {
     };
 };
 
-},{}]},["isWtv","1xC6H","lz6jh"], "lz6jh", "parcelRequire77dd")
+},{}],"i6wR5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8c3e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8c3e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _loginImagePng = require("./../../assets/login-image.png");
+var _loginImagePngDefault = parcelHelpers.interopDefault(_loginImagePng);
+var _reactRedux = require("react-redux");
+var _react = require("react");
+var _s = $RefreshSig$();
+const SignUp = ()=>{
+    _s();
+    // const {isSuccess}=useSelector((state)=>state.auth)
+    // const {isLoggedIn}=useSelector((state)=>state.auth)
+    const dispatch = (0, _reactRedux.useDispatch)();
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const [name, setName] = (0, _react.useState)("");
+    const [email, setEmail] = (0, _react.useState)("");
+    const [password, setPassword] = (0, _react.useState)("");
+    const [error, setError] = (0, _react.useState)("");
+    const validateEmail = (email)=>{
+        return String(email).toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    };
+    const registerUser = async (e)=>{
+        e.preventDefault();
+        console.log(email, password);
+        if (!email || !password) setEmail("All field are required");
+        if (password.length < 6) setError("password must be upto 6 characters");
+        if (!validateEmail(email)) setError("please enter a valid email");
+        const userData = {
+            email,
+            password
+        };
+        try {
+            const response = await fetch("https://food-villa-chandan.onrender.com/api/users/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    password
+                })
+            });
+            if (!response.ok) throw new Error("Login failed");
+            const data = await response.json();
+            console.log("Login successful:", data);
+            navigate("/");
+        // Handle successful login (e.g., redirect to a dashboard, show a success message)
+        } catch (error) {
+            console.error("Login error:", error);
+        // Handle login error (e.g., show an error message)
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "login",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "login-left",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _loginImagePngDefault.default),
+                    alt: ""
+                }, void 0, false, {
+                    fileName: "src/components/SignUP.js",
+                    lineNumber: 64,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/SignUP.js",
+                lineNumber: 63,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "login-right",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                    onSubmit: registerUser,
+                    id: "login-box",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            children: "Signup"
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 68,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Name"
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 69,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 70,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            placeholder: "",
+                            value: name,
+                            onChange: (e)=>{
+                                setName(e.target.value);
+                            },
+                            type: "text"
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 71,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Email"
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 77,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 78,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            value: email,
+                            onChange: (e)=>{
+                                setEmail(e.target.value);
+                            },
+                            type: "email",
+                            placeholder: " "
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 79,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 87,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            children: "Password"
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 88,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 89,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            value: password,
+                            onChange: (e)=>{
+                                setPassword(e.target.value);
+                            },
+                            type: "password",
+                            placeholder: ""
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 90,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 98,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            type: "submit",
+                            children: "Create an Account"
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 99,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/login",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "pl-10 text-white text-xl mb-5",
+                                children: "Already Registered ? SignIn Now "
+                            }, void 0, false, {
+                                fileName: "src/components/SignUP.js",
+                                lineNumber: 102,
+                                columnNumber: 11
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/SignUP.js",
+                            lineNumber: 101,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/SignUP.js",
+                    lineNumber: 67,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/SignUP.js",
+                lineNumber: 66,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/SignUP.js",
+        lineNumber: 62,
+        columnNumber: 5
+    }, undefined);
+};
+_s(SignUp, "ZTBwVRsLHd71g/MOmNMde7/WWRw=", false, function() {
+    return [
+        (0, _reactRedux.useDispatch),
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
+_c = SignUp;
+exports.default = SignUp;
+var _c;
+$RefreshReg$(_c, "SignUp");
+
+  $parcel$ReactRefreshHelpers$8c3e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","./../../assets/login-image.png":"46EmR","react-redux":"bdVon","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["isWtv","1xC6H","lz6jh"], "lz6jh", "parcelRequire77dd")
 
 //# sourceMappingURL=index.b3e3d45e.js.map

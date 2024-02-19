@@ -24,15 +24,7 @@ const Body = () => {
   }, []);
 
   const getRestraunt = async () => {
-const data = await fetch(HOME_PAGE_URL, {
-  mode: 'no-cors',
-  method: 'GET',
-  headers: {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-    'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
-  },
-});
+const data = await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
     const json = await data.json();
     console.log(json);
 // initialize checkJsonData() function to check Swiggy Restaurant data

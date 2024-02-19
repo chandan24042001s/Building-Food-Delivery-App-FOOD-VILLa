@@ -6,7 +6,7 @@ const Footer = () => {
     <div id="footer">
       <div id="top">
         <div id="top-left">
-          <h3>Foodiez</h3>
+          <h3>FoodVilla</h3>
         </div>
         <div id="top-right">
           <div id="icon1">
@@ -19,7 +19,7 @@ const Footer = () => {
       </div>
       <div id="bottom">
         <div id="first-section">
-          <h3>ABOUT FOODIEZ</h3>
+          <h3>ABOUT FOODVILLA</h3>
           <h4>Who We Are</h4>
           <h4>Blog</h4>
           <h4>Work With Us</h4>
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <div id="second-section">
           <h3>FOODIEVERSE</h3>
-          <h4>Foodiez</h4>
+          <h4>FoodVilla</h4>
           <h4>Foodit</h4>
           <h4>Feeding India</h4>
           <h4>Hyperpure</h4>
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
           <div id="third-section-bottom">
             <h3>FOR ENTERPRISES</h3>
-            <h4>Foodiez For Enterprise</h4>
+            <h4>FoodVilla For Enterprise</h4>
           </div>
         </div>
         <div id="fourth-section">
@@ -73,7 +73,7 @@ const Footer = () => {
         <h4>
           By continuing past this page, you agree to our Terms of Service,
           Cookie Policy, Privacy Policy and Content Policies. All trademarks are
-          properties of their respective owners. 2008-2023 © Foodiez™ Ltd. All
+          properties of their respective owners. 2008-2024 © Foodvilla™ Ltd. All
           rights reserved.
         </h4>
       </div>

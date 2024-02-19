@@ -37243,7 +37243,7 @@ const Contact = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                class: "h-80 flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500",
+                class: "h-80 mb-28 flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     class: "relative",
                     children: [
@@ -42783,7 +42783,7 @@ const Footer = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         id: "top-left",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                            children: "Foodiez"
+                            children: "FoodVilla"
                         }, void 0, false, {
                             fileName: "src/components/Footer.js",
                             lineNumber: 9,
@@ -42850,7 +42850,7 @@ const Footer = ()=>{
                         id: "first-section",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                children: "ABOUT FOODIEZ"
+                                children: "ABOUT FOODVILLA"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
                                 lineNumber: 22,
@@ -42922,7 +42922,7 @@ const Footer = ()=>{
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                children: "Foodiez"
+                                children: "FoodVilla"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
                                 lineNumber: 33,
@@ -43006,7 +43006,7 @@ const Footer = ()=>{
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                        children: "Foodiez For Enterprise"
+                                        children: "FoodVilla For Enterprise"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
                                         lineNumber: 47,
@@ -43160,7 +43160,7 @@ const Footer = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "terms",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                    children: "By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2023 \xa9 Foodiez\u2122 Ltd. All rights reserved."
+                    children: "By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 \xa9 Foodvilla\u2122 Ltd. All rights reserved."
                 }, void 0, false, {
                     fileName: "src/components/Footer.js",
                     lineNumber: 73,

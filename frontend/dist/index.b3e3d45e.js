@@ -43216,14 +43216,68 @@ const Order = ()=>{
         dispatch((0, _cartSlice.clearCart)());
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-center align-middle mt-64 mb-30",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            className: "text-4xl",
-            children: "Congratulations !! Your order has been Placed !!!"
-        }, void 0, false, {
+        className: "flex justify-center items-center bg-[#2196F3] w-[100vw] h-[100vh]",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            class: "dialog-box",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    class: "firework",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "emitter order-1"
+                        }, void 0, false, {
+                            fileName: "src/components/Order.js",
+                            lineNumber: 16,
+                            columnNumber: 3
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "emitter order-3"
+                        }, void 0, false, {
+                            fileName: "src/components/Order.js",
+                            lineNumber: 17,
+                            columnNumber: 3
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "emitter order-2"
+                        }, void 0, false, {
+                            fileName: "src/components/Order.js",
+                            lineNumber: 18,
+                            columnNumber: 3
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "emitter order-4"
+                        }, void 0, false, {
+                            fileName: "src/components/Order.js",
+                            lineNumber: 19,
+                            columnNumber: 3
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Order.js",
+                    lineNumber: 15,
+                    columnNumber: 2
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    class: "text-3xl font-bold",
+                    children: "Congratulations!"
+                }, void 0, false, {
+                    fileName: "src/components/Order.js",
+                    lineNumber: 21,
+                    columnNumber: 2
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onclick: "start();",
+                    children: "Go Back"
+                }, void 0, false, {
+                    fileName: "src/components/Order.js",
+                    lineNumber: 22,
+                    columnNumber: 2
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "src/components/Order.js",
-            lineNumber: 13,
-            columnNumber: 8
+            lineNumber: 14,
+            columnNumber: 1
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Order.js",

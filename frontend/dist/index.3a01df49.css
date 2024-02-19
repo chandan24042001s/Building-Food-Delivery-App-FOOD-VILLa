@@ -942,4 +942,64 @@ label span {
   }
 }
 
+.dialog-box {
+  text-align: center;
+  background: #fff;
+  border-radius: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 500px;
+  height: 300px;
+  padding: 60px;
+  font-size: 35px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 2px 4px #0006, 0 7px 13px -3px #0000004d, inset 0 -3px #0003;
+}
+
+.emitter {
+  position: absolute;
+}
+
+.emitter div {
+  background: var(--particle-color);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.order-1 {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.order-3 {
+  right: 0;
+}
+
+.order-2 {
+  left: 0;
+}
+
+.order-4 {
+  top: 0;
+  right: 0;
+}
+
+.dialog-box button {
+  color: #fff;
+  cursor: pointer;
+  background: #2196f3;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
 /*# sourceMappingURL=index.3a01df49.css.map */

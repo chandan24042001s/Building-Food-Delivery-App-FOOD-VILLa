@@ -26,8 +26,8 @@ const useResMenuData = (
         // Set restaurant data
         const restaurantData =
           json?.data?.cards
-            ?.map((x) => x.card)
-            ?.find((x) => x && x.card["@type"] === RESTAURANT_TYPE_KEY)?.card
+            ?.map((x) => x.card) 
+            ?.find((x) => x && x.card["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")?.card
             ?.info || null;
         setRestaurant(restaurantData);
 

@@ -38238,7 +38238,7 @@ const useResMenuData = (swiggy_menu_api_URL, resId, RESTAURANT_TYPE_KEY, MENU_IT
             } else {
                 const json = await response.json();
                 // Set restaurant data
-                const restaurantData = json?.data?.cards?.map((x)=>x.card)?.find((x)=>x && x.card["@type"] === RESTAURANT_TYPE_KEY)?.card?.info || null;
+                const restaurantData = json?.data?.cards?.map((x)=>x.card)?.find((x)=>x && x.card["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")?.card?.info || null;
                 setRestaurant(restaurantData);
                 // Set menu item data
                 const menuItemsData = json?.data?.cards.find((x)=>x.groupedCard)?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map((x)=>x.card?.card)?.filter((x)=>x["@type"] == MENU_ITEM_TYPE_KEY)?.map((x)=>x.itemCards).flat().map((x)=>x.card?.info) || [];

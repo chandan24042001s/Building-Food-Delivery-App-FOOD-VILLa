@@ -96,7 +96,7 @@ const resData = await checkJsonData(json);
       <div className="flex flex-wrap justify-center ">
         {filteredRestraunts && filteredRestraunts.map((restraunt, index) => (
           <Link to={"/restaurant/" + restraunt?.info?.id}>
-            <RestrauntCard key={restraunt?.info?.id} {...restraunt.info} />
+            <RestrauntCard key={restraunt?.info?.id} {...restraunt?.info} />
           </Link>
         ))}
       </div>

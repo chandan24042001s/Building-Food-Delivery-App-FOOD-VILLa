@@ -98,4 +98,59 @@
   }
   
 
+  .card {
+    width: 240px;
+    border-radius: 5px;
+    box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, 0.2);
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card h3 {
+    color: var(--light-text-title);
+  }
+  
+  .card > img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card > h5 {
+    font-weight: lighter;
+  }
+  
+  .card > span {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+  .card > span > h4 {
+    font-weight: bolder;
+    font-size: 14px;
+    padding: 0 2px 0;
+    margin-top: 10px;
+    color: var(--light-text-title);
+  }
+  
+  .card > span > h4:first-child {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-green);
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  .card > span > h4:first-child .fa-star {
+    font-size: 10px;
+    padding: 2px 5px 3px 0;
+  }
   

@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended:false}))
 app.use(
     cors({
-        origin:["http://localhost:3000","http://localhost:1234","https://food-villa-chandan.vercel.app"],
+        origin:["http://localhost:3000","http://localhost:1234","https://food-villa-chandan.vercel.app","https://food-villa-empire.netlify.app"],
         methods:["POST", "GET", "PUT", "DELETE"],
         credentials:true,
     })

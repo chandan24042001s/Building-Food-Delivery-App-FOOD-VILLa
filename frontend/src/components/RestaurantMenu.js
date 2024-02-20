@@ -1,105 +1,101 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { swiggyIMageCDN } from "../../constant";
-// import useRestaurant from "../utils/useRestaurant";
-import Shimmer from "./Shimmer";
-// import { CDN_URL } from "../utils/constants";
-// import { addItem } from "../utils/cartSlice";
-import { useDispatch } from "react-redux";
-import useRestaurantMenu from "../utils/useRestaurantMenu";
-import RestaurantCategory from "./RestaurantCategory";
+
+import { swiggyIMageCDN,swiggy_menu_api_URL, RESTAURANT_TYPE_KEY,
+  MENU_ITEM_TYPE_KEY } from "../../constant";
 import ShimmerRes from "./ShimmerRes";
+import useResMenuData from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-  const [veg, setVeg] = useState(false);
-  const [vegStyle, setVegStyle] = useState({
-    left: "5%",
-    backgroundColor: "#fff",
-  });
-  const { id } = useParams();
-  const [showIndex, setShowIndex] = useState(null);
-   const resInfo = useRestaurantMenu(id);
-
-  const dummy = "Dummy Data";
-
-
- 
-  const [cardItems, setCardItems] = useState({});
-  const dispatch=useDispatch();
-
-  if (resInfo === null) {
-    return <ShimmerRes />;
-  }
-
-  const { name, cuisines, locality, cloudinaryImageId } =
-    resInfo?.cards[0]?.card?.card?.info;
-
-  const categoryFiltered =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
-      (c) =>
-        c?.card?.card?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
-    );
+  const { resId } = useParams(); // call useParams and get value of restaurant id using object destructuring
+  const [restaurant, menuItems] = useResMenuData(
+    swiggy_menu_api_URL,
+    resId,
+    RESTAURANT_TYPE_KEY,
+    MENU_ITEM_TYPE_KEY
+  );
+console.log(restaurant)
+  // const isOnline = useOnline();
   
-    return (
-      <div id="menu">
-        <div className="flex">
-        <div id="menu-top">
-          <img className="rounded-lg" src={swiggyIMageCDN + cloudinaryImageId} alt="" />
-          <h1>{name}</h1>
-          <h3>{cuisines?.join(", ")}</h3>
-          <h3>{locality}</h3>
-        </div>
+  // if user is not Online then return UserOffline component
+  // if(!isOnline){
+  //   return <UserOffline />
+  // }
 
-        <div id="veg-only-button" className="self-end">
-            <div id="slider">
-              <div
-                onClick={() => {
-                  if (veg == false) {
-                    setVeg(true);
-                    setVegStyle({
-                      right: "5%",
-                      backgroundColor: "green",
-                    });
-                  } else {
-                    setVeg(false);
-                    setVegStyle({
-                      left: "5%",
-                      backgroundColor: "#fff",
-                    });
-                  }
-                }}
-                id="circle"
-                style={vegStyle}
-              ></div>
+  return !restaurant ? (
+    <ShimmerRes />
+  ) : (
+    <div className="restaurant-menu">
+      <div className="restaurant-summary">
+        <img
+          className="restaurant-img"
+          src={swiggyIMageCDN + restaurant?.cloudinaryImageId}
+          alt={restaurant?.name}
+        />
+        <div className="restaurant-summary-details">
+          <h2 className="restaurant-title">{restaurant?.name}</h2>
+          <p className="restaurant-tags">{restaurant?.cuisines?.join(", ")}</p>
+          <div className="restaurant-details">
+            <div
+              className="restaurant-rating"
+              style={
+                restaurant?.avgRating < 4
+                  ? { backgroundColor: "var(--light-red)" }
+                  : restaurant?.avgRating === "--"
+                  ? { backgroundColor: "white", color: "black" }
+                  : { color: "white" }
+              }
+            >
+              <i className="fa-solid fa-star"></i>
+              <span>{restaurant?.avgRating}</span>
             </div>
-            <h3>Veg Only</h3>
+            <div className="restaurant-rating-slash">|</div>
+            <div>{restaurant?.sla?.slaString}</div>
+            <div className="restaurant-rating-slash">|</div>
+            <div>{restaurant?.costForTwoMessage}</div>
+          </div>
         </div>
       </div>
-  
-        <div id="menu-bottom">
-  
-          <ul id="accordian">
-            {categoryFiltered?.map((c, index) => {
-              return (
-                // Controlled Component
-                <RestaurantCategory
-                  key={c?.card?.card?.title}
-                  vegOption={veg}
-                  resData={c?.card?.card}
-                  showItems={index === showIndex && true}
-                  setMyIndex={() => {
-                    index === showIndex
-                      ? setShowIndex(null)
-                      : setShowIndex(index);
-                  }}
-                />
-              );
-            })}
-          </ul>
+
+      <div className="restaurant-menu-content">
+        <div className="menu-items-container">
+          <div className="menu-title-wrap">
+            <h3 className="menu-title">Recommended</h3>
+            <p className="menu-count">{menuItems.length} ITEMS</p>
+          </div>
+          <div className="menu-items-list">
+            {menuItems.map((item) => (
+              <div className="menu-item" key={item?.id}>
+                <div className="menu-item-details">
+                  <h3 className="item-title">{item?.name}</h3>
+                  <p className="item-cost">
+                    {item?.price > 0
+                      ? new Intl.NumberFormat("en-IN", {
+                          style: "currency",
+                          currency: "INR",
+                        }).format(item?.price / 100)
+                      : " "}
+                  </p>
+                  <p className="item-desc">{item?.description}</p>
+                </div>
+                <div className="menu-img-wrapper">
+                  {item?.imageId && (
+                    <img
+                      className="menu-item-img"
+                      src={swiggyIMageCDN + item?.imageId}
+                      alt={item?.name}
+                    />
+                  )}
+                  <button className="add-btn"> ADD +</button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    );  
+    </div>
+  );
+};
   
   
   
@@ -148,6 +144,6 @@ const RestaurantMenu = () => {
      
   //   </div>
   // );
-};
+
 
 export default RestaurantMenu;

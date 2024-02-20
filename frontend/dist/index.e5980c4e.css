@@ -674,10 +674,6 @@ img, video {
   column-gap: .5rem;
 }
 
-.self-end {
-  align-self: flex-end;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1178,6 +1174,62 @@ img, video {
   100% {
     background-position: 0%;
   }
+}
+
+.card {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 240px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: -1px 5px 10px 5px #70707033;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  color: var(--light-text-title);
+}
+
+.card > img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.card > h5 {
+  font-weight: lighter;
+}
+
+.card > span {
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  display: flex;
+}
+
+.card > span > h4 {
+  color: var(--light-text-title);
+  margin-top: 10px;
+  padding: 0 2px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.card > span > h4:first-child {
+  background-color: var(--light-green);
+  color: #fff;
+  border-radius: 5px;
+  align-items: center;
+  margin-top: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.card > span > h4:first-child .fa-star {
+  padding: 2px 5px 3px 0;
+  font-size: 10px;
 }
 
 .before\:absolute:before {

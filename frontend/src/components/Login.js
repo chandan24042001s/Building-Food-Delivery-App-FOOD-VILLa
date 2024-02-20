@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import LoginImage from "./../../assets/login-image.png";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   // const {isSuccess}=useSelector((state)=>state.auth)
@@ -48,6 +49,7 @@ const Login = () => {
       }
   
       const data = await response.json();
+      dispatch(addUser(data))
       console.log('Login successful:', data);
       navigate("/")
       // Handle successful login (e.g., redirect to a dashboard, show a success message)
